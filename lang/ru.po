@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Oleg <CBETJIOMYP@gmail.com>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-30 17:12+0200\n"
+"PO-Revision-Date: 2015-12-30 17:15+0200\n"
+"Last-Translator: Oleg \n"
+"Language-Team: русский <>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Gtranslator 2.91.6\n"
+
+msgid "View details"
+msgstr "Детальнее"
+
+msgid "FREE"
+msgstr "Бесплатно"
+
+msgid "Search"
+msgstr "Поиск"
+
+msgid "Sorry, we couldn't find any tests for "
+msgstr "К сожалению, по вашему запросу статей  не найдено "
+
+msgid "There are no articles in this category yet"
+msgstr "В этой категории статей  пока что нет"
+
+msgid "Share test"
+msgstr "Поделиться статьей"
+
+msgid "private"
+msgstr "приватный"
+
+msgid "Sign in"
+msgstr "Войти"
+
+msgid "Sign up / Sign in"
+msgstr "Регистрация / Вход"
+
+msgid "Welcome!"
+msgstr "Добро пожаловать!"
+
+msgid "Learn more"
+msgstr "Узнать больше"
+
+msgid "Do not show me this message again"
+msgstr "Больше не показывать это сообщение"
+
+msgid "Share this test"
+msgstr "Поделиться статьей"
+
+msgid "Share this page"
+msgstr "Поделиться страницей"
+
+msgid "Keep in touch"
+msgstr "Оставайтесь на связи"
+
+msgid "Twitter"
+msgstr "Twitter"
+
+msgid "Facebook"
+msgstr "Facebook"
+
+msgid "Videos on Youtube"
+msgstr "Видео на Youtube"
+
+msgid "Support"
+msgstr "Помощь"
+
+msgid "Support page"
+msgstr "Поддержка"
+
+msgid "Suggest an idea"
+msgstr "Предложить идею"
+
+msgid "Need help?"
+msgstr "Нужна помощь?"
+
+msgid "Read more"
+msgstr "Узнать больше"
+
+msgid "Meet our team"
+msgstr "Наша команда"
+
+msgid "Sign in with your social network account"
+msgstr "Войдите с помощью акаунта социальной сети"
+
+msgid "or use your e-mail"
+msgstr "или используйте ваш e-mail"
+
+msgid "Share"
+msgstr "Поделиться"
+
+msgid "Do you like our company?"
+msgstr "Понравилось?"

@@ -1,0 +1,81 @@
+{
+  "domain": "messages",
+  "locale_data": {
+    "messages": {
+      "": {
+        "domain": "messages",
+        "plural_forms": "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);",
+        "lang": ""
+      },
+      "View details": [
+        "Детальнее"
+      ],
+      "FREE": [
+        "Бесплатно"
+      ],
+      "Search": [
+        "Поиск"
+      ],
+      "private": [
+        "приватный"
+      ],
+      "Sign in": [
+        "Войти"
+      ],
+      "Sign up / Sign in": [
+        "Регистрация / Вход"
+      ],
+      "Welcome!": [
+        "Добро пожаловать!"
+      ],
+      "Do not show me this message again": [
+        "Больше не показывать это сообщение"
+      ],
+      "Share this page": [
+        "Поделиться страницей"
+      ],
+      "Keep in touch": [
+        "Оставайтесь на связи"
+      ],
+      "Twitter": [
+        "Twitter"
+      ],
+      "Facebook": [
+        "Facebook"
+      ],
+      "Videos on Youtube": [
+        "Видео на Youtube"
+      ],
+      "Support": [
+        "Помощь"
+      ],
+      "Support page": [
+        "Поддержка"
+      ],
+      "Suggest an idea": [
+        "Предложить идею"
+      ],
+      "Need help?": [
+        "Нужна помощь?"
+      ],
+      "Do you like our company?": [
+        "Понравилось?"
+      ],
+      "Read more": [
+        "Узнать больше"
+      ],
+      "Meet our team": [
+        "Наша команда"
+      ],
+      "Sign in with your social network account": [
+        "Войдите с помощью акаунта социальной сети"
+      ],
+      "or use your e-mail": [
+        "или используйте ваш e-mail"
+      ],
+      "Share": [
+        "Поделиться"
+      ]
+    }
+  }
+}

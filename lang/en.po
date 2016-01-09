@@ -1,0 +1,103 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-30 17:12+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+msgid "View details"
+msgstr ""
+
+msgid "FREE"
+msgstr ""
+
+msgid " minute"
+msgid_plural " minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Search"
+msgstr ""
+
+msgid "There are no articles in this category yet"
+msgstr ""
+
+msgid "private"
+msgstr ""
+
+msgid "Sign in"
+msgstr ""
+
+msgid "Sign up / Sign in"
+msgstr ""
+
+msgid "Welcome!"
+msgstr ""
+
+msgid "Learn more"
+msgstr ""
+
+msgid "Skip this message"
+msgstr ""
+
+msgid "Do not show me this message again"
+msgstr ""
+
+msgid "Share this page"
+msgstr ""
+
+msgid "Keep in touch"
+msgstr ""
+
+msgid "Twitter"
+msgstr ""
+
+msgid "Facebook"
+msgstr ""
+
+msgid "Videos on Youtube"
+msgstr ""
+
+msgid "Support"
+msgstr ""
+
+msgid "Support page"
+msgstr ""
+
+msgid "Suggest an idea"
+msgstr ""
+
+msgid "Need help?"
+msgstr ""
+
+msgid "Do you like our company?"
+msgstr ""
+
+msgid "Read more"
+msgstr ""
+
+msgid "Meet our team"
+msgstr ""
+
+msgid "Sign in with your social network account"
+msgstr ""
+
+msgid "or use your e-mail"
+msgstr ""
+
+msgid "Share"
+msgstr ""
+

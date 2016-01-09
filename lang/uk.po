@@ -1,0 +1,96 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Oleg <CBETJIOMYP@gmail.com>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-30 17:12+0200\n"
+"PO-Revision-Date: 2015-12-30 17:15+0200\n"
+"Last-Translator: Oleg\n"
+"Language-Team: русский <>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Gtranslator 2.91.6\n"
+
+msgid "View details"
+msgstr "Докладніше"
+
+msgid "FREE"
+msgstr "Безкоштовно"
+
+msgid "Search"
+msgstr "Пошук"
+
+msgid "private"
+msgstr "приватний"
+
+msgid "Sign in"
+msgstr "Увійти"
+
+msgid "Sign up / Sign in"
+msgstr "Реєстрація / Вхід"
+
+msgid "Welcome!"
+msgstr "Ласкаво просимо!"
+
+msgid "Learn more"
+msgstr "Дізнатися більше"
+
+msgid "Skip this message"
+msgstr "Пропустити це повідомлення"
+
+msgid "Do not show me this message again"
+msgstr "Більше не показувати це повідомлення"
+
+msgid "Share this page"
+msgstr "Поділитися сторінкою"
+
+msgid "Keep in touch"
+msgstr "Залишайтеся на зв'язку"
+
+msgid "Twitter"
+msgstr "Twitter"
+
+msgid "Facebook"
+msgstr "Facebook"
+
+msgid "Videos on Youtube"
+msgstr "Відео на Youtube"
+
+msgid "Support"
+msgstr "Допомога"
+
+msgid "Support page"
+msgstr "Підтримка"
+
+msgid "Suggest an idea"
+msgstr "Запропонувати ідею"
+
+msgid "Need help?"
+msgstr "Потрібна допомога?"
+
+msgid "Do you like our company?"
+msgstr "Сподобалося"
+
+msgid "Read more"
+msgstr "Дізнатися більше"
+
+msgid "Meet our team"
+msgstr "Наша команда"
+
+msgid "Sign in with your social network account"
+msgstr "Увійдіть за допомогою аккаунта соціальної мережі"
+
+msgid "or use your e-mail"
+msgstr "або використовуйте ваш e-mail"
+
+msgid "Share"
+msgstr "Поділитися"
