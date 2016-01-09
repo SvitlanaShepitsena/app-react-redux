@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { loadUsers } from '../../actions/user';
 import connectDataFetchers from '../../lib/connectDataFetchers.jsx';
 
-import UsersPage from '../../components/pages/UsersPage.jsx';
+import UsersPage from '../../components/pages/UsersPage/UsersPage.jsx';
 
 class UsersPageContainer extends Component {
     handleUserCardClick = (user) => {

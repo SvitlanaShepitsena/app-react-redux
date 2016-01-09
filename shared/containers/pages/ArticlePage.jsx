@@ -10,7 +10,7 @@ import EmbedEvents         from '../../utils/EmbedEventsUtil';
 import config              from '../../config';
 import { sendEvent }       from '../../utils/googleAnalytics';
 
-import ArticlePage from '../../components/pages/ArticlePage.jsx';
+import ArticlePage from '../../components/pages/ArticlePage/ArticlePage.jsx';
 
 const embedEvents = new EmbedEvents({
     embedOrigin: config.embedOrigin

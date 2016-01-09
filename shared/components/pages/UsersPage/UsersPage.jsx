@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Grid, { Cell } from 'react-mdl/lib/Grid';
+import Grid, { Cell } from '../../../../node_modules/react-mdl/lib/Grid';
 
-import UserCard    from '../UserCard/UserCard.jsx';
+import UserCard    from '../../UserCard/UserCard.jsx';
 
 export default ({ users = [], onItemClick }) => {
     return (
