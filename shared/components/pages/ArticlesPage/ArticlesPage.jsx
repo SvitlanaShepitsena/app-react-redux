@@ -1,6 +1,5 @@
 import React from 'react';
 import cx    from 'classnames';
-
 import { Tab, Tabs }  from 'react-mdl/lib/Tabs';
 import Grid, { Cell } from '../../../../node_modules/react-mdl/lib/Grid';
 import Spinner        from '../../../../node_modules/react-mdl/lib/Spinner';
@@ -49,11 +48,12 @@ export default class ArticlesPage extends React.Component {
                         phone={12}>
                         <ArticleCard>
                             <p>
-                            {article.title}
+                                {article.title}
                             </p>
-                            <p>
-                                <img src={"http://img.youtube.com/vi/"+article.youtubeId+"/0.jpg"}/>
-                            </p>
+                            <div>
+                                <img className="ArticlesPage__youtube"
+                                     src={"http://img.youtube.com/vi/"+article.youtubeId+"/0.jpg"}/>
+                            </div>
 
                         </ArticleCard>
                     </Cell>
