@@ -8,12 +8,18 @@ import { getSupportedLocales, sprintf } from '../shared/utils';
 
 export function fetchComponentsData(dispatch, components, params, query) {
     // Select components that have assync request for the specific route
-    const promises = components.map(current => {
-        const component = current.WrappedComponent ? current.WrappedComponent : current;
-        return component.fetchData
-            ? component.fetchData(dispatch, params, query)
-            : null;
+    let needs = [];
+    for (var i = 0; i < components.length; i++) {
+        var component = components[i];
+        component = component.WrappedComponent ? component.WrappedComponent : component;
+        if (component.need) {
+            needs.push(...component.need);
+        }
+    }
+    const promises = needs.map(need => {
+        return dispatch(need());
     });
+
     return Promise.all(promises);
 }
 

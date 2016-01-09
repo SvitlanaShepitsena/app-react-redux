@@ -5,11 +5,18 @@ var _ = require('lodash');
 export default  function (app, passport) {
     // user routes
     app.post('/login', users.postLogin);
-    app.post('/signup', users.postSignUp);
     app.get('/logout', users.getLogout);
+
+    app.post('/signup', users.postSignUp);
 
     app.get('/auth/google/callback',
         passport.authenticate('google', {failureRedirect: '/login'}),
+        function (req, res) {
+            // Successful authentication, redirect home.
+            res.redirect('/tutorials');
+        });
+    app.get('/auth/facebook/callback',
+        passport.authenticate('facebook', {failureRedirect: '/login'}),
         function (req, res) {
             // Successful authentication, redirect home.
             res.redirect('/tutorials');
@@ -27,6 +34,12 @@ export default  function (app, passport) {
             'https://www.googleapis.com/auth/plus.me',
             'https://www.googleapis.com/auth/userinfo.profile',
             'https://www.googleapis.com/auth/userinfo.email'
+        ]
+    }));
+    app.get('/auth/facebook', passport.authenticate('facebook', {
+        scope: [
+            'public_profile',
+            'email'
         ]
     }));
 

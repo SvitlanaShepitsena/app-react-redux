@@ -5,10 +5,12 @@ export default class User extends React.Component {
     }
 
     render() {
+        const user = this.props.user;
         return (
+
             <div>
                 <div>
-                    <img src={this.props.user.picture}/>
+                    {user.picture ? <img src={this.props.user.picture}/> : <div>{user.name}</div>}
                 </div>
                 <a href="/logout">
                     Logout

@@ -18,7 +18,6 @@ import { fetchComponentsData,
 
 import routes         from '../shared/routes.jsx';
 import configureStore from '../shared/store/configureStore';
-import api            from '../shared/apiSingleton';
 import i18n           from '../shared/i18n';
 
 import clientConfig from '../etc/client-config.json';

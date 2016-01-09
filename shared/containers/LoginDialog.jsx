@@ -15,12 +15,12 @@ export default class LoginDialogContainer extends Component {
 
     handleSocialLogin = (type) => {
         const { getLocale } = this.context.i18n;
-
+        console.log();
         const redirectURL = strformat(socialAuthURL, {
             lang: getLocale().toUpperCase(),
-            continueRoute: escapeHTML(`/companywall${window.location.pathname + window.location.search}`),
             socialType: type
         });
+        console.log(redirectURL);
         this.openLink(redirectURL);
         sendEvent('user', 'login', type);
     };
