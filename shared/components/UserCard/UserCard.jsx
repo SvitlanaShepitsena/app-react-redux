@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 
-import Button from 'react-mdl/lib/Button';
+import Button from '../../../node_modules/react-mdl/lib/Button';
 
 export default ({id, pictureURL, firstName, lastName, country, city, onClick}) => {
     return (

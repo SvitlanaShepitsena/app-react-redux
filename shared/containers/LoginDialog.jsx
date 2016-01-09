@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import strformat                       from 'strformat';
 import escapeHTML                      from 'lodash/string/escape';
 
-import LoginDialog from '../components/LoginDialog.jsx';
+import LoginDialog from '../components/LoginDialog/LoginDialog.jsx';
 import { socialAuthURL, emailAuthURL } from '../config';
 import { sendEvent } from '../utils/googleAnalytics';
 

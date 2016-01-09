@@ -3,13 +3,12 @@
 import React, { Component, PropTypes } from 'react';
 import cx                              from 'classnames';
 
-import SearchBox      from './SearchBox.jsx';
-import LanguageSwitch from '../containers/LanguageSwitch.jsx';
-import LoginDialog    from '../containers/LoginDialog.jsx';
+import LanguageSwitch from '../../containers/LanguageSwitch.jsx';
+import LoginDialog    from '../../containers/LoginDialog.jsx';
 import {connect} from 'react-redux';
-import User from '../components/common/User';
+import User from '../common/User';
 
-import IconButton from 'react-mdl/lib/IconButton';
+import IconButton from '../../../node_modules/react-mdl/lib/IconButton';
 
 if (process.env.BROWSER) {
     require('./AppBar.less');

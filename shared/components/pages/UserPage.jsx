@@ -1,6 +1,6 @@
 import React from 'react';
 
-import UserCard from '../UserCard.jsx';
+import UserCard from '../UserCard/UserCard.jsx';
 
 export default ({ user }) => {
     return (

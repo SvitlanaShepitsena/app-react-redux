@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import ShareDialog from '../components/ShareDialog.jsx';
+import ShareDialog from '../components/ShareDialog/ShareDialog.jsx';
 import { facebookAppId } from '../config';
 
 import { sendEvent } from '../utils/googleAnalytics';

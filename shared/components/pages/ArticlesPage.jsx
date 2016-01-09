@@ -5,8 +5,8 @@ import { Tab, Tabs }  from 'react-mdl/lib/Tabs';
 import Grid, { Cell } from 'react-mdl/lib/Grid';
 import Spinner        from 'react-mdl/lib/Spinner';
 
-import ArticleCard    from '../ArticleCard.jsx';
-import AppBar      from '../AppBar.jsx';
+import ArticleCard    from '../ArticleCard/ArticleCard.jsx';
+import AppBar      from '../AppBar/AppBar.jsx';
 
 if (process.env.BROWSER) {
     require('./ArticlesPage.less');

@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import strformat          from 'strformat';
 
-import Footer from '../components/Footer.jsx';
+import Footer from '../components/Footer/Footer.jsx';
 import { footerLinks, companywallShareLink } from '../config';
 
 import { sendEvent } from '../utils/googleAnalytics';

@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 
-import Icon from './Icon.jsx';
-import ShareDialog from '../containers/ShareDialog.jsx';
+import Icon from './../common/Icon/Icon.jsx';
+import ShareDialog from '../../containers/ShareDialog.jsx';
 
 if (process.env.BROWSER) {
     require('./Footer.less');

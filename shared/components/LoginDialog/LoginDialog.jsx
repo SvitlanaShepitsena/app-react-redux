@@ -1,10 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 
-import Dialog    from './Dialog.jsx';
-import Button    from 'react-mdl/lib/Button';
-import Icon      from './Icon.jsx';
+import Dialog    from './../common/Dialog/Dialog.jsx';
+import Button    from '../../../node_modules/react-mdl/lib/Button';
+import Icon      from './../common/Icon/Icon.jsx';
 
-import { facebookAppId } from '../config';
+import { facebookAppId } from '../../config';
 
 if (process.env.BROWSER) {
     require('./LoginDialog.less');
