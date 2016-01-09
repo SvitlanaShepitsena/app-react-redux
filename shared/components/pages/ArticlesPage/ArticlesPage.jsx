@@ -47,7 +47,15 @@ export default class ArticlesPage extends React.Component {
                         col={3}
                         tablet={4}
                         phone={12}>
-                        <ArticleCard>{article.title}</ArticleCard>
+                        <ArticleCard>
+                            <p>
+                            {article.title}
+                            </p>
+                            <p>
+                                <img src={"http://img.youtube.com/vi/"+article.youtubeId+"/0.jpg"}/>
+                            </p>
+
+                        </ArticleCard>
                     </Cell>
                 )}
             </Grid>
