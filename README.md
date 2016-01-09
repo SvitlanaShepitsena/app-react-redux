@@ -5,7 +5,7 @@ Initial Boilerplate: https://github.com/WebbyLab/itsquiz-wall
 
 ## Installation (development)
 
-1. Inside folder etc rename file ```rename-to-no-share.json``` to ``no-share.json``
+1. Inside folder etc fill ``no-share.json`` with google and fb credentials
 2. Register app at https://console.developers.google.com and fill google part
 3. Register app at https://developers.facebook.com/ and fill facebook part
 4. ```npm install``` 
