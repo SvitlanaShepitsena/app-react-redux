@@ -47,9 +47,7 @@ class ArticlesPageContainer extends Component {
 
     componentDidMount() {
         this.props.getArticlesIfNeeded();
-        embedEvents.subscribe({
-            'SEARCH_QUIZ_WALL': this.handleSearch
-        });
+
     }
 
     componentWillReceiveProps(nextProps) {
@@ -65,7 +63,6 @@ class ArticlesPageContainer extends Component {
     }
 
     componentWillUnmount() {
-        embedEvents.unsubscribe();
     }
 
     render() {

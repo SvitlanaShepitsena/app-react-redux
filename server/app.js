@@ -59,6 +59,12 @@ configPassport(app, passport);
 configExpress(app, passport);
 configRoutes(app, passport);
 
+function processLocal(clientConfig,host,protocol) {
+    clientConfig.staticUrl=protocol+'://'+host;
+    console.log(clientConfig.staticUrl);
+
+    return clientConfig;
+}
 app.use((req, res) => {
     // Process old links like /en/articles
     if (req.url === '/') {
@@ -114,7 +120,7 @@ app.use((req, res) => {
                             route: renderProps.routes[renderProps.routes.length - 1].path,
                             state: initialState
                         });
-
+                        let clientConfig2 = processLocal(clientConfig,req.get('host'),req.protocol);
                         return renderHTML({
                             componentHTML,
                             initialState,
