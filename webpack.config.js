@@ -2,6 +2,7 @@ global.Promise = require('bluebird'); // for node 0.10
 
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var LessPluginCleanCSS = require('less-plugin-clean-css');
 
 module.exports = {
     entry: "./client/app.js",
@@ -12,6 +13,7 @@ module.exports = {
                 NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development')
             }
         }),
+        new LessPluginCleanCSS({advanced:true}),
         new ExtractTextPlugin("[name].css")
     ],
     output: {
@@ -27,7 +29,7 @@ module.exports = {
             },
             {
                 test: /\.less$/,
-                loader: ExtractTextPlugin.extract("style-loader", "css!autoprefixer!less")
+                loader: ExtractTextPlugin.extract("style!css!less")
             },
 
             {test: /\.gif$/, loader: "url-loader?limit=10000&mimetype=image/gif"},
