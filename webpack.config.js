@@ -2,7 +2,6 @@ global.Promise = require('bluebird'); // for node 0.10
 
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var LessPluginCleanCSS = require('less-plugin-clean-css');
 
 module.exports = {
     entry: "./client/app.js",
@@ -13,7 +12,6 @@ module.exports = {
                 NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development')
             }
         }),
-        new LessPluginCleanCSS({advanced:true}),
         new ExtractTextPlugin("[name].css")
     ],
     output: {
@@ -29,7 +27,7 @@ module.exports = {
             },
             {
                 test: /\.less$/,
-                loader: ExtractTextPlugin.extract("style!css!less")
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader!less-loader")
             },
 
             {test: /\.gif$/, loader: "url-loader?limit=10000&mimetype=image/gif"},
@@ -38,8 +36,8 @@ module.exports = {
             {test: /\.svg/, loader: "url-loader?limit=26000&mimetype=image/svg+xml"},
             {test: /\.(woff|woff2|ttf|eot)/, loader: "url-loader?limit=1"},
 
-            {test: /\.jsx$/, loader: process.env.NODE_ENV==='production'?"babel-loader":"react-hot!babel", exclude: [/node_modules/, /public/]},
-            {test: /\.js$/, loader: "babel-loader", exclude: [/node_modules/, /public/]},
+            {test: /\.jsx$/, loader: process.env.NODE_ENV==='production'?"babel-loader":"react-hot!babel", exclude: [/node_modules/]},
+            {test: /\.js$/, loader: "babel-loader", exclude: [/node_modules/]},
 
             {test: /\.json$/, loader: "json-loader"}
         ]
