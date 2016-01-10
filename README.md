@@ -7,12 +7,12 @@ Initial Boilerplate: https://github.com/WebbyLab/itsquiz-wall
 
 1. Inside folder etc create ``no-share.json`` with google and fb credentials 
  
-{
-  "googleClientID": "",
+  { "googleClientID": "",
   "googleClientSecret": "",
 
   "facebookClientID": "",
   "facebookClientSecret": ""
+  }
 2. Register app at https://console.developers.google.com and fill google part
 3. Register app at https://developers.facebook.com/ and fill facebook part
 4. ```npm install``` 
