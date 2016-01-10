@@ -9,7 +9,7 @@ import Checkbox    from '../../../node_modules/react-mdl/lib/Checkbox';
 import Isvg from 'react-inlinesvg';
 
 if (process.env.BROWSER) {
-    require('!style!css!less!./WelcomeDialog.less');
+    require('./WelcomeDialog.less');
 }
 
 export default class WelcomeDialog extends Component {
