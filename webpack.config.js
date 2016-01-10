@@ -27,7 +27,7 @@ module.exports = {
             },
             {
                 test: /\.less$/,
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader!less-loader")
+                loader: ExtractTextPlugin.extract("style-loader", "css!autoprefixer!less")
             },
 
             {test: /\.gif$/, loader: "url-loader?limit=10000&mimetype=image/gif"},
