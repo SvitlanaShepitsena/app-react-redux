@@ -52,7 +52,7 @@ export default class ArticlesPage extends React.Component {
                             </p>
                             <div>
                                 <img className="ArticlesPage__youtube"
-                                     src={"http://img.youtube.com/vi/" + article.youtubeId + "/0.jpg"}/>
+                                     src={"https://img.youtube.com/vi/" + article.youtubeId + "/0.jpg"}/>
                             </div>
 
                         </ArticleCard>
