@@ -20,7 +20,8 @@ import routes         from '../shared/routes.jsx';
 import configureStore from '../shared/store/configureStore';
 import i18n           from '../shared/i18n';
 
-import clientConfig from '../etc/client-config.json';
+import clientConfig from '../etc/settings';
+import PORT from './port';
 
 // Initialize localization
 import ruLocaleData from '../public/static/lang/ru.json';
@@ -184,8 +185,6 @@ function renderHTML({componentHTML, initialState, metaData, config}) {
         </html>
     `;
 }
-
-const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
     console.log('Server listening on: ' + PORT);
