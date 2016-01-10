@@ -36,7 +36,7 @@ module.exports = {
             {test: /\.svg/, loader: "url-loader?limit=26000&mimetype=image/svg+xml"},
             {test: /\.(woff|woff2|ttf|eot)/, loader: "url-loader?limit=1"},
 
-            {test: /\.jsx$/, loader: "react-hot!babel-loader", exclude: [/node_modules/, /public/]},
+            {test: /\.jsx$/, loader: process.env.NODE_ENV==='production'?"babel-loader":"react-hot!babel", exclude: [/node_modules/, /public/]},
             {test: /\.js$/, loader: "babel-loader", exclude: [/node_modules/, /public/]},
 
             {test: /\.json$/, loader: "json-loader"}
