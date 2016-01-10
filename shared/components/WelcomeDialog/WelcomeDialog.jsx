@@ -8,9 +8,9 @@ import Checkbox    from '../../../node_modules/react-mdl/lib/Checkbox';
 
 import Isvg from 'react-inlinesvg';
 
-if (process.env.BROWSER) {
-    require('./WelcomeDialog.less');
-}
+//if (process.env.BROWSER) {
+//    require('./WelcomeDialog.less');
+//}
 
 export default class WelcomeDialog extends Component {
 
