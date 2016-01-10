@@ -50,6 +50,7 @@
     "less": "^2.5.3",
     "less-loader": "^2.2.2",
     "lodash": "^3.10.1",
+    "lodash.escape": "^3.0.0",
     "method": "^2.0.0",
     "method-override": "^2.3.5",
     "moment": "^2.10.6",

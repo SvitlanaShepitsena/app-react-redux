@@ -4,6 +4,7 @@ var _ = require('lodash');
 
 export default  function (app, passport) {
     // user routes
+    var p = process.env.NODE_ENV === "production" ? '' : '3001';
     app.post('/login', users.postLogin);
     app.get('/logout', users.getLogout);
 
@@ -13,12 +14,16 @@ export default  function (app, passport) {
         passport.authenticate('google', {failureRedirect: '/login'}),
         function (req, res) {
             // Successful authentication, redirect home.
-            res.redirect('/tutorials');
+            var fullUrl = req.protocol + '://' + req.get('host')+p;
+            res.redirect(fullUrl+'/tutorials');
         });
     app.get('/auth/facebook/callback',
         passport.authenticate('facebook', {failureRedirect: '/login'}),
         function (req, res) {
             // Successful authentication, redirect home.
+
+            var fullUrl = req.protocol + '://' + req.get('host')+p;
+            res.redirect(fullUrl+'/tutorials');
             res.redirect('/tutorials');
         });
 
