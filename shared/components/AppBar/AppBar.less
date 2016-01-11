@@ -13,7 +13,7 @@
   width: 100%;
   box-sizing: border-box;
   padding: 16px;
-  background-color: @primary-1-color;
+  background-color: @primary-2-color;
   color: @white-darker;
   z-index: 99;
   transition-duration: .3s;
@@ -53,10 +53,13 @@
 
 .AppBar__left {
   display: flex;
+  position: relative;
+  top: 0;
   align-items: center;
   flex: 4;
 
   .AppBar__logo {
+    max-width: 55px;
     vertical-align: initial;
     min-width: 40px;
   }

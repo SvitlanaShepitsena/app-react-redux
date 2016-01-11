@@ -2,6 +2,7 @@
 
 import React, { Component, PropTypes } from 'react';
 import cx                              from 'classnames';
+import {Link} from 'react-router';
 
 import LanguageSwitch from '../../containers/LanguageSwitch.jsx';
 import LoginDialog    from '../../containers/LoginDialog.jsx';
@@ -99,13 +100,11 @@ class AppBar extends Component {
         const { isLoggingIn, isFixedToTop } = this.state;
 
         const rootClassNames = cx('AppBar', this.props.className, {
-            'AppBar--fixed': isFixedToTop,
-            'AppBar--with-search': displaySearch
+            'AppBar--fixed': isFixedToTop
         });
 
         return (
             <div className={rootClassNames}>
-
                 <LoginDialog
                     isOpen={isLoggingIn}
                     onRequestClose={this.handleLoginDialogClose}
@@ -115,10 +114,13 @@ class AppBar extends Component {
                     {
                         rightIconName
                             ? <IconButton name={rightIconName} onClick={onRightIconClick}/>
-                            : <img width='70px' height='70px' src={LOGO_SRC} className='AppBar__logo'/>
+                            : <Link to="/">
+
+                            <img src={LOGO_SRC} className='AppBar__logo'/>
+                        </Link>
                     }
 
-                    <h2 className='AppBar__title'> {title} </h2>
+                    <span className='AppBar__title'> {title} </span>
                 </div>
                 {
                     displaySearch
@@ -132,6 +134,9 @@ class AppBar extends Component {
                 {
                     displayRightMenu
                         ? <div className='AppBar__right'>
+                        <div className='AppBar__menu-item'>
+                            <Link to="/articles"/>
+                        </div>
                         <LanguageSwitch className='AppBar__lang'/>
 
                         <div className='AppBar__menu-item'>
