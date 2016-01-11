@@ -145,10 +145,8 @@ class AppBar extends Component {
                             <div className='AppBar__menu-item'>
                                 {!user && <div onClick={this.handleLogin}>{l('Sign up / Sign in')}</div>}
                             </div>
-                            <div className='AppBar__menu-item-icon'>
-                                {!user && <div onClick={this.handleLogin}>
-                                    <img src='../../assets/login.png'/>
-                                </div>}
+                            <div className='AppBar__menu-item AppBar__menu-item-icon'>
+                                {!user && <img onClick={this.handleLogin} src='static/images/login.png' style={{width:30}}/> }
 
                             </div>
                         </div>
