@@ -26,7 +26,7 @@ export default class MainLayout extends Component {
             <div className='MainLayout'>
                 <div className='MainLayout__content'>
                     <AppBar
-                        title={l('Chicago Wep App')}
+                        title={l('Chicago Web App')}
                         className='ArticlesPage__app-bar'
                         fixOnScroll={false}
                         scrollOffset={65}

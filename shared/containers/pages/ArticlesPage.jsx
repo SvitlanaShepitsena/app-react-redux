@@ -50,11 +50,7 @@ class ArticlesPageContainer extends Component {
     };
 
     componentDidMount() {
-        console.log('Immmmm');
         this.props.getArticlesIfNeeded();
-        embedEvents.subscribe({
-            'SEARCH_QUIZ_WALL': this.handleSearch
-        });
     }
 
     componentWillReceiveProps(nextProps) {

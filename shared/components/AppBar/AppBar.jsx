@@ -134,8 +134,8 @@ class AppBar extends Component {
                 {
                     displayRightMenu
                         ? <div className='AppBar__right'>
-                        <div className='AppBar__menu-item'>
-                            <Link to="/articles"/>
+                        <div >
+                            <Link to="/articles" className='AppBar__menu-item-nav'>TUTORIALS</Link>
                         </div>
                         <LanguageSwitch className='AppBar__lang'/>
 

@@ -44,11 +44,14 @@
 }
 
 .AppBar__title {
-  font-size: 20px;
+  font-size: 18px;
   margin-left: 16px;
   font-weight: 400;
-
   .text-ellipsis;
+  @media @phone {
+    flex: 0;
+    display: none;
+  }
 }
 
 .AppBar__left {
@@ -59,7 +62,7 @@
   flex: 4;
 
   .AppBar__logo {
-    max-width: 55px;
+    max-width: 50px;
     vertical-align: initial;
     min-width: 40px;
   }
@@ -105,6 +108,17 @@
   font-weight: 400;
   font-size: 14px;
   color: @white-darker;
+}
+
+.AppBar__menu-item-nav {
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-left: 5px;
+  height: 20px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+  color: @white-dark;
 }
 
 &.AppBar--fixed {
