@@ -20,8 +20,14 @@ export default class MainLayout extends Component {
         const {showWelcomeScreen, showFooter, footerLinks, onWelcomeScreenDismiss} = this.props;
 
         return (
+
             <div className='MainLayout'>
+
                 <div className='MainLayout__content'>
+
+                    <div>
+                        Navigation
+                    </div>
                     <WelcomeDialog
                         isOpen={showWelcomeScreen}
                         onDismiss={onWelcomeScreenDismiss}

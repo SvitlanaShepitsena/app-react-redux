@@ -31,12 +31,14 @@ export default class MainLayoutContainer extends Component {
         const isEmbedded = this.props.location.query.embed;
 
         return (
-            <MainLayout
-                showWelcomeScreen={!isEmbedded && isWelcomeScreenShown}
-                onWelcomeScreenDismiss={this.handleWelcomeScreenDismiss}
-                showFooter={!isEmbedded}>
-                {this.props.children}
-            </MainLayout>
+            <div>
+                <MainLayout
+                    showWelcomeScreen={!isEmbedded && isWelcomeScreenShown}
+                    onWelcomeScreenDismiss={this.handleWelcomeScreenDismiss}
+                    showFooter={!isEmbedded}>
+                    {this.props.children}
+                </MainLayout>
+            </div>
         );
     }
 }

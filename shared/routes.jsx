@@ -8,11 +8,13 @@ import App from './containers/App.jsx';
 import MainLayout from './containers/layouts/MainLayout.jsx';
 
 import ArticlesPageContainer from './containers/pages/ArticlesPage.jsx';
+import HomePage from './containers/HomePage';
+
 
 export default (
     <Route component={App}>
-        <Route component={MainLayout} path='/'>
-            <Redirect from='/' to='/tutorials'/>
+        <Route component={MainLayout}>
+            <Route component={HomePage} path='/'/>
             <Route component={ArticlesPageContainer} path='/tutorials'/>
         </Route>
     </Route>
