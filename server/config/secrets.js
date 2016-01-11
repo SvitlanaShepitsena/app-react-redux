@@ -1,5 +1,5 @@
 if (!process.env.GOOGLE_CLIENTID) {
-var config={};
+    var config = {};
     config = require('../../etc/no-share.json');
 
 }
