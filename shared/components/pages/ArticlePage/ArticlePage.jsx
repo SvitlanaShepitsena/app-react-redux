@@ -21,6 +21,7 @@ export default class ArticlePage extends React.Component {
     };
 
     renderContent = () => {
+
         const {
             article,
             authorArticles,
@@ -64,6 +65,7 @@ export default class ArticlePage extends React.Component {
     }
 
     render() {
+        const { l } = this.context.i18n;
         const {
             article,
             isLoading,
