@@ -10,7 +10,6 @@ import MainLayout from './containers/layouts/MainLayout.jsx';
 import ArticlesPageContainer from './containers/pages/ArticlesPage.jsx';
 import HomePage from './containers/HomePage';
 
-
 export default (
     <Route component={App}>
         <Route component={MainLayout}>

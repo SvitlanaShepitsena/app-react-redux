@@ -79,7 +79,7 @@ export default class ArticlesPage extends React.Component {
             <div className={classes}>
                 <div className='ArticlesPage__header'>
                     <AppBar
-                        title={l('Chicago Wep App')}
+                        title={l('Chicago Web App')}
                         className='ArticlesPage__app-bar'
                         fixOnScroll={false}
                         scrollOffset={65}
