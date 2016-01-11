@@ -9,6 +9,7 @@ if (process.env.BROWSER) {
 }
 
 export default class App extends Component {
+    static contextTypes = {i18n: React.PropTypes.object};
 
     componentDidMount() {
         initialize();

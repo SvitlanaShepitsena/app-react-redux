@@ -20,8 +20,7 @@ import routes         from '../shared/routes.jsx';
 import configureStore from '../shared/store/configureStore';
 import i18n           from '../shared/i18n';
 
-import clientConfig from '../etc/settings';
-import PORT from './port';
+import clientConfig from '../etc/client-config.json';
 
 // Initialize localization
 import ruLocaleData from '../public/static/lang/ru.json';
@@ -59,23 +58,25 @@ configPassport(app, passport);
 configExpress(app, passport);
 configRoutes(app, passport);
 
-function processLocal(clientConfig,host,protocol) {
-    clientConfig.staticUrl=protocol+'://'+host;
-    console.log(clientConfig.staticUrl);
-
-    return clientConfig;
-}
 app.use((req, res) => {
     // Process old links like /en/articles
+
 
     if (req.url.match(/\/[a-z]{2}\//i)) {
         const noLangUrl = req.url.replace(/^\/[a-z]{2}/i, '');
         return res.redirect(302, noLangUrl);
     }
 
+    // If user is authenticated redirect him to the wall embedded into the main app
+    if (req.cookies.authenticated && !req.url.match('embed')) {
+        const redirectUrl = makeRedirectUrl({originalUrl: req.url});
+        return res.redirect(302, redirectUrl);
+    }
 
     const locale = detectLocale(req);
-
+    if (req.user) {
+        console.log(req.user);
+    }
     const store = configureStore({user: req.user});
 
     const i18nTools = i18nToolsRegistry[locale];
@@ -110,7 +111,7 @@ app.use((req, res) => {
                             route: renderProps.routes[renderProps.routes.length - 1].path,
                             state: initialState
                         });
-                        let clientConfig2 = processLocal(clientConfig,req.get('host'),req.protocol);
+
                         return renderHTML({
                             componentHTML,
                             initialState,
@@ -181,6 +182,8 @@ function renderHTML({componentHTML, initialState, metaData, config}) {
         </html>
     `;
 }
+
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
     console.log('Server listening on: ' + PORT);

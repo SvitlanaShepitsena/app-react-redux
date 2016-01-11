@@ -4,27 +4,21 @@ var _ = require('lodash');
 
 export default  function (app, passport) {
     // user routes
-    var p = process.env.NODE_ENV === "production" ? '' : '3001';
-
     app.post('/login', users.postLogin);
     app.get('/logout', users.getLogout);
+
     app.post('/signup', users.postSignUp);
 
     app.get('/auth/google/callback',
-        passport.authenticate('google', {failureRedirect: '/'}),
+        passport.authenticate('google', {failureRedirect: '/login'}),
         function (req, res) {
             // Successful authentication, redirect home.
-            var fullUrl = req.protocol + '://' + req.get('host');
-            console.log(fullUrl);
-            res.redirect(fullUrl + '/tutorials');
+            res.redirect('/tutorials');
         });
     app.get('/auth/facebook/callback',
-        passport.authenticate('facebook', {failureRedirect: '/'}),
+        passport.authenticate('facebook', {failureRedirect: '/login'}),
         function (req, res) {
             // Successful authentication, redirect home.
-
-            var fullUrl = req.protocol + '://' + req.get('host');
-            res.redirect(fullUrl + '/tutorials');
             res.redirect('/tutorials');
         });
 

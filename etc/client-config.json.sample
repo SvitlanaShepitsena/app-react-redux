@@ -4,14 +4,14 @@
   "staticUrl": "http://localhost:8050",
   "loginUrl": "http://localhost:3001/tutorials",
   "embedOrigin": "http://localhost:3001/tutorials",
-  "socialAuthURL": "http://localhost:3001/auth/{socialType}",
+  "socialAuthURL": "http://localhost:3001/auth/",
   "emailAuthURL": "http://localhost:3001/auth/local/",
   "facebookAppId": "XXX",
   "gaTrackingCode": "XXX",
   "companywallShareLink": "http://localhost:3001/tutorials",
   "welcomeLinks": {
-    "aboutCompany": "http://localhost:3001/tutorials",
     "createTest": "http://localhost:3001/tutorials",
+    "aboutCompany": "http://localhost:3001/tutorials",
     "discoverTests": "http://localhost:3001/tutorials"
   },
   "footerLinks": {

@@ -4,6 +4,7 @@ import React, {Component, PropTypes} from 'react';
 import { connect }                   from 'react-redux';
 import strformat                     from 'strformat';
 
+import EmbedEvents                            from '../../utils/EmbedEventsUtil';
 import config                                 from '../../config';
 import { sendEvent }                          from '../../utils/googleAnalytics';
 
@@ -11,6 +12,9 @@ import { bindActionCreators } from 'redux';
 import * as articleActions from '../../actions/article';
 import ArticlesPage from '../../components/pages/ArticlesPage/ArticlesPage.jsx';
 
+const embedEvents = new EmbedEvents({
+    embedOrigin: config.embedOrigin
+});
 
 class ArticlesPageContainer extends Component {
     static contextTypes = {i18n: PropTypes.object};
@@ -48,7 +52,9 @@ class ArticlesPageContainer extends Component {
     componentDidMount() {
         console.log('Immmmm');
         this.props.getArticlesIfNeeded();
-
+        embedEvents.subscribe({
+            'SEARCH_QUIZ_WALL': this.handleSearch
+        });
     }
 
     componentWillReceiveProps(nextProps) {
@@ -64,6 +70,7 @@ class ArticlesPageContainer extends Component {
     }
 
     componentWillUnmount() {
+        embedEvents.unsubscribe();
     }
 
     render() {

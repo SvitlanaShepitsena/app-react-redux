@@ -120,6 +120,14 @@ class AppBar extends Component {
 
                     <h2 className='AppBar__title'> {title} </h2>
                 </div>
+                {
+                    displaySearch
+                        ? (
+                        <div className='AppBar__center'>
+                        </div>
+                    )
+                        : null
+                }
 
                 {
                     displayRightMenu
