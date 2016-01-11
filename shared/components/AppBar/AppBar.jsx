@@ -17,6 +17,7 @@ if (process.env.BROWSER) {
 
 const LOGO_SRC = './static/logo.svg';
 
+
 class AppBar extends Component {
     static contextTypes = {i18n: PropTypes.object};
 
@@ -139,9 +140,17 @@ class AppBar extends Component {
                         </div>
                         <LanguageSwitch className='AppBar__lang'/>
 
-                        <div className='AppBar__menu-item'>
+                        <div>
                             {user && <User user={user}/>}
-                            {!user && <div onClick={this.handleLogin}>{l('Sign up / Sign in')}</div>}
+                            <div className='AppBar__menu-item'>
+                                {!user && <div onClick={this.handleLogin}>{l('Sign up / Sign in')}</div>}
+                            </div>
+                            <div className='AppBar__menu-item-icon'>
+                                {!user && <div onClick={this.handleLogin}>
+                                    <img src='../../assets/login.png'/>
+                                </div>}
+
+                            </div>
                         </div>
                     </div>
                         : null

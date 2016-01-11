@@ -72,6 +72,10 @@
   justify-content: flex-end;
   flex: 2;
 
+  .AppBar__menu-item-icon {
+    display: none;
+  }
+
   @media @phone {
     max-width: 50px;
     flex: 0;
@@ -79,6 +83,11 @@
     .AppBar__menu-item {
       display: none;
     }
+    .AppBar__menu-item-icon {
+      display: block;
+    }
+
+
   }
 }
 
