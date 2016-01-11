@@ -14,7 +14,7 @@ export default (
     <Route component={App}>
         <Route component={MainLayout}>
             <Route component={HomePage} path='/'/>
-            <Route component={ArticlesPageContainer} path='/articles'/>
+            <Route component={ArticlesPageContainer} path='/tutorials'/>
         </Route>
     </Route>
 );
