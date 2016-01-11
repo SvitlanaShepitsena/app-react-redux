@@ -46,6 +46,7 @@ class ArticlesPageContainer extends Component {
     };
 
     componentDidMount() {
+        console.log('Immmmm');
         this.props.getArticlesIfNeeded();
 
     }

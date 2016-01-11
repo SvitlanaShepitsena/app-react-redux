@@ -5,7 +5,6 @@ import Grid, { Cell } from '../../../../node_modules/react-mdl/lib/Grid';
 import Spinner        from '../../../../node_modules/react-mdl/lib/Spinner';
 
 import ArticleCard    from '../../ArticleCard/ArticleCard.jsx';
-import AppBar      from '../../AppBar/AppBar.jsx';
 
 if (process.env.BROWSER) {
     require('./ArticlesPage.less');
@@ -22,7 +21,6 @@ export default class ArticlesPage extends React.Component {
     };
 
     renderContent = () => {
-        const { l } = this.context.i18n;
         const { articles, isLoading, isEmpty, onItemClick } = this.props;
 
         if (isLoading) {
@@ -78,12 +76,6 @@ export default class ArticlesPage extends React.Component {
         return (
             <div className={classes}>
                 <div className='ArticlesPage__header'>
-                    <AppBar
-                        title={l('Chicago Wep App')}
-                        className='ArticlesPage__app-bar'
-                        fixOnScroll={false}
-                        scrollOffset={65}
-                    />
 
                     <div className='ArticlesPage__tab-bar'>
                         <Tabs
