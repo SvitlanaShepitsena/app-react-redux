@@ -21,6 +21,7 @@ export default class ArticlesPage extends React.Component {
     };
 
     renderContent = () => {
+        const { l } = this.context.i18n;
         const { articles, isLoading, isEmpty, onItemClick } = this.props;
 
         if (isLoading) {
