@@ -1,4 +1,3 @@
-'use strict';
 import React from 'react';
 
 export default class AboutPage extends React.Component {
@@ -12,8 +11,7 @@ export default class AboutPage extends React.Component {
     render() {
         return (
             <div>
-                <h3></h3>
-                <hr/>
+                About
             </div>
         )
     }
