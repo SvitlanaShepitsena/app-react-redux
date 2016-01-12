@@ -35,6 +35,7 @@
     "fast-html-parser": "^1.0.1",
     "geoip-lite": "^1.1.6",
     "history": "^1.13.1",
+    "html-cruncher": "0.0.8",
     "http-proxy": "^1.12.0",
     "isomorphic-fetch": "^2.2.0",
     "jed": "^1.1.0",
