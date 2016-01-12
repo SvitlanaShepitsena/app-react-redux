@@ -89,7 +89,7 @@ msgstr ""
 msgid "Do you like our company?"
 msgstr ""
 
-msgid "Read more"
+msgid "About us"
 msgstr ""
 
 msgid "Meet our team"

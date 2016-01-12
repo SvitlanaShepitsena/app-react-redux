@@ -83,7 +83,7 @@ msgstr "Потрібна допомога?"
 msgid "Do you like our company?"
 msgstr "Сподобалося"
 
-msgid "Read more"
+msgid "About us"
 msgstr "Дізнатися більше"
 
 msgid "Meet our team"

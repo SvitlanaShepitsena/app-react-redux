@@ -1,7 +1,7 @@
+'use strict';
 import React from 'react';
 
-
-export default class HomePage extends React.Component {
+export default class AboutPage extends React.Component {
     // Constructor
     constructor(props) {
         // Running constructor of Parent (React.Component) for binding this to object.
@@ -12,14 +12,10 @@ export default class HomePage extends React.Component {
     render() {
         return (
             <div>
-               Home
+                <h3></h3>
+                <hr/>
             </div>
         )
-    }
-
-    _onReady(event) {
-        // access to player in all event handlers via event.target
-        event.target.pauseVideo();
     }
 
 }
