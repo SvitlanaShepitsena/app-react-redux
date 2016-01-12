@@ -18,25 +18,20 @@ if (process.env.BROWSER) {
 const LOGO_SRC = './static/logo.svg';
 
 class AppBar extends Component {
-    static contextTypes = {i18n: PropTypes.object};
+    static contextTypes = {i18n: React.PropTypes.object};
 
     static propTypes = {
         title: PropTypes.string,
-        search: PropTypes.string,
         displayRightMenu: PropTypes.bool,
-        displaySearch: PropTypes.bool,
         rightIconName: PropTypes.string,
         fixOnScroll: PropTypes.bool,
         scrollOffset: PropTypes.number,
-        onRightIconClick: PropTypes.func,
-        onSearch: PropTypes.func
+        onRightIconClick: PropTypes.func
     };
 
     static defaultProps = {
         title: '',
-        search: '',
         fixOnScroll: true,
-        displaySearch: false,
         displayRightMenu: true,
         rightIconName: '',
         scrollOffset: 0
@@ -84,18 +79,14 @@ class AppBar extends Component {
     }
 
     render() {
+        const { l } = this.context.i18n;
         const user = this.props.user ? this.props.user.profile : null;
         const {
             title,
-            search,
-            displaySearch,
             displayRightMenu,
             rightIconName,
             onRightIconClick,
-            onSearch
             } = this.props;
-
-        const { l } = this.context.i18n;
 
         const { isLoggingIn, isFixedToTop } = this.state;
 
@@ -122,20 +113,12 @@ class AppBar extends Component {
 
                     <span className='AppBar__title'> {title} </span>
                 </div>
-                {
-                    displaySearch
-                        ? (
-                        <div className='AppBar__center'>
-                        </div>
-                    )
-                        : null
-                }
 
                 {
                     displayRightMenu
                         ? <div className='AppBar__right'>
                         <div >
-                            <Link to="/tutorials" className='AppBar__menu-item-nav'>TUTORIALS</Link>
+                            <Link to="/tutorials" className='AppBar__menu-item-nav'>ALL TUTORIALS</Link>
                         </div>
                         <LanguageSwitch className='AppBar__lang'/>
 
