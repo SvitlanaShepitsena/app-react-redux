@@ -89,7 +89,7 @@ msgstr "Предложить идею"
 msgid "Need help?"
 msgstr "Нужна помощь?"
 
-msgid "Read more"
+msgid "About us"
 msgstr "Узнать больше"
 
 msgid "Meet our team"

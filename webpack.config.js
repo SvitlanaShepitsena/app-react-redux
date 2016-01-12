@@ -1,4 +1,6 @@
 global.Promise = require('bluebird'); // for node 0.10
+var autoprefixer = require('autoprefixer');
+var precss = require('precss');
 
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -23,11 +25,11 @@ module.exports = {
         loaders: [
             {
                 test: /\.css$/,
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader")
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader!postcss-loader")
             },
             {
                 test: /\.less$/,
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader!autoprefixer-loader!less-loader")
+                loader: ExtractTextPlugin.extract("style-loader", "css-loader!postcss-loader!less-loader")
             },
 
             {test: /\.gif$/, loader: "url-loader?limit=10000&mimetype=image/gif"},
@@ -40,7 +42,11 @@ module.exports = {
             {test: /\.js$/, loader: "babel", exclude: [/node_modules/, /public/]},
 
             {test: /\.json$/, loader: "json-loader"}
+
         ]
     },
+    postcss: function () {
+        return [autoprefixer, precss];
+    }
 
 };

@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 
+import {Link} from 'react-router';
 import Icon from './../common/Icon/Icon.jsx';
 import ShareDialog from '../../containers/ShareDialog.jsx';
 
@@ -51,12 +52,7 @@ export default class Footer extends Component {
                             <h3 className="Footer__menu-header">{l('Do you like our company?')}</h3>
                             <ul className="Footer__menu-items">
                                 <li>
-                                    <a
-                                        href={links.aboutCompany}
-                                        target='_blank'
-                                        onClick={onLinkClick.bind(null, 'aboutCompany')}>
-                                        {l('Read more')}
-                                    </a>
+                                    <Link to="/about">{l('About us')}</Link>
                                 </li>
                                 <li>
                                     <a
