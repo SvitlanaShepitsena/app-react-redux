@@ -1,5 +1,3 @@
-'use strict';
-
 import React, { Component, PropTypes } from 'react';
 import cx                              from 'classnames';
 import {Link} from 'react-router';
@@ -118,7 +116,7 @@ class AppBar extends Component {
                     displayRightMenu
                         ? <div className='AppBar__right'>
                         <div >
-                            <Link to="/tutorials" className='AppBar__menu-item-nav'>ALL TUTORIALS</Link>
+                            <Link to="/tutorials" className='AppBar__menu-item-nav'>{l('All tutorials')}</Link>
                         </div>
                         <LanguageSwitch className='AppBar__lang'/>
 
