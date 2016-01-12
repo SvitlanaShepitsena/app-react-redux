@@ -58,6 +58,7 @@ configPassport(app, passport);
 configExpress(app, passport);
 configRoutes(app, passport);
 
+
 app.use((req, res) => {
     // Process old links like /en/articles
 

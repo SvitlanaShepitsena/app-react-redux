@@ -15,13 +15,9 @@
     "discoverTests": "http://localhost:3001/tutorials"
   },
   "footerLinks": {
-    "twitter": "http://twitter.com",
-    "facebook": "https://www.facebook.com",
+    "facebook": "https://www.facebook.com/svitlana.shepitsena.9",
     "youtube": "https://www.youtube.com/channel/UCLzTnoBTQuSSg7DUNRXlmtg/playlists",
-    "supportPage": "http://localhost:3001/tutorials",
-    "suggestIdea": "http://localhost:3001/tutorials",
     "aboutCompany": "http://localhost:3001/tutorials",
-    "ourTeam": "http://localhost:3001/tutorials",
-    "helpMe": "mailto:support@appexample.com"
+    "ourTeam": "http://localhost:3001/tutorials"
   }
 }
