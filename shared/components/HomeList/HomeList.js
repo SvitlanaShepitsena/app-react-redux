@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid, { Cell } from '../../../../node_modules/react-mdl/lib/Grid';
+import Grid, { Cell } from 'react-mdl/lib/Grid';
 import { Card, CardTitle, CardActions } from 'react-mdl/lib/Card';
 
 if (process.env.BROWSER) {
