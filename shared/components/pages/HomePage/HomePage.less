@@ -1,21 +1,44 @@
 @import '../../../assets/palette.less';
 @import '../../../assets/colors.less';
 
-.Home {
-  background-color: @blue-200;
+.HomePage {
   width: 100%;
-  padding: 36px 8px;
+  background-color: @blue-200;
 }
 
-.Home__VideoContainer {
+.HomePage__top {
+  padding: 36px 8px;
+  width: 100%;
+}
+
+.HomePage__VideoContainer {
   background-color: @grey-900;
   padding: 8px;
   margin: 0px auto;
   max-width: 592px;
+  max-height: 592px;
+  iframe, object, embed {
+    max-width: 100%;
+  }
 }
 
-.Home__Frame {
+.HomePage__Frame {
+  max-width: 100%;
   width: 560px;
   margin: 0px auto;
   height: 315px;
+}
+
+.HomePage_sliderContainer {
+  background-color: @grey-200;
+}
+
+.HomePage_slider {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.HomePage__btnContainer {
+  width: 170px;
+  margin: 20px auto 0;
 }
