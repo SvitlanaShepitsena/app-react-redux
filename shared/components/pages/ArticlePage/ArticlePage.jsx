@@ -2,8 +2,8 @@ import React from 'react';
 import cx    from 'classnames';
 
 import { Card } from 'react-mdl/lib/Card';
-import Grid, { Cell }                   from '../../../../node_modules/react-mdl/lib/Grid';
-import Spinner                          from '../../../../node_modules/react-mdl/lib/Spinner';
+import Grid, { Cell }                   from 'react-mdl/lib/Grid';
+import Spinner                          from 'react-mdl/lib/Spinner';
 
 import LoginDialog          from '../../../containers/LoginDialog.jsx';
 

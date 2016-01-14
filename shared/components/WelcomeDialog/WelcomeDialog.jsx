@@ -65,14 +65,14 @@ export default class WelcomeDialog extends Component {
             <div className='WelcomeDialog__slide'>
                 <div className="WelcomeDialog__slide-image">
                     <div className="svg-primary">
-                        <Isvg src="/static/images/welcome/01.svg" alt="image"></Isvg>
+                        <Isvg src="/static/images/welcome/01.svg" alt="Welcome Dialog Image"></Isvg>
                     </div>
                 </div>
 
                 <div className='WelcomeDialog__slide-content'>
-                    <h1> {l('Welcome Slider')} </h1>
+                    <h1 className="color-brown-app"> {l('Welcome Slider')} </h1>
                     <p > {l('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac sapien id mauris.')} </p>
-                    <Button className='WelcomeDialog__btn' primary raised ripple onClick={this.handleNextSlide}>
+                    <Button className='WelcomeDialog__btn ' accent raised ripple onClick={this.handleNextSlide}>
                         {l('Learn more')}
                     </Button>
                 </div>
@@ -89,7 +89,7 @@ export default class WelcomeDialog extends Component {
                 <div className='WelcomeDialog__slide-content'>
                     <h1>{l('Page 2')}</h1>
                     <p> {l('Blandit orci sodales vel. Nam imperdiet felis eget quam aliquam, sit amet.')}</p>
-                    <Button className='WelcomeDialog__btn btn-primary' raised onClick={onDiscoverTests}>
+                    <Button className='WelcomeDialog__btn ' primary raised onClick={onDiscoverTests}>
                         {l('Discover tests')}
                     </Button>
                 </div>
