@@ -13,6 +13,11 @@ export default class HomePage extends React.Component {
         return (
             <div className='HomePage'>
                 <div className="HomePage__top">
+                    <div className="HomePage__title">
+                        <h1>React with Redux 201</h1>
+                        <h3>Best Practices for Production Applications</h3>
+                    </div>
+
                     <div className="HomePage__VideoContainer">
                         <iframe className="HomePage__Frame"
                                 src="https://www.youtube.com/embed/DKUimZvRyqg"
