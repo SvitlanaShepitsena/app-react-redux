@@ -4,8 +4,10 @@ var precss = require('precss');
 
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
+
     entry: "./client/app.js",
     plugins: [
         new webpack.DefinePlugin({
@@ -14,7 +16,8 @@ module.exports = {
                 NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development')
             }
         }),
-        new ExtractTextPlugin("[name].css")
+        new ExtractTextPlugin("[name].css"),
+        new OpenBrowserPlugin({ url: 'http://localhost:3001' })
     ],
     output: {
         path: __dirname + '/public/static/build/',
