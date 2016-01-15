@@ -55,6 +55,7 @@
 }
 
 .AppBar__left {
+  text-align: left;
   display: flex;
   position: relative;
   top: 0;
@@ -79,7 +80,7 @@
     display: none;
   }
 
-  @media @phone {
+  @media @phone, @tablet {
     min-width: 300px;
     flex: 0;
 
@@ -131,6 +132,7 @@
   color: @white-dark;
   font-size: 14px;
   @media @phone {
+    padding: 5px 10px;
     font-size: 13px;
   }
 }
