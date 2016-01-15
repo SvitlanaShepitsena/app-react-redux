@@ -80,7 +80,7 @@
   }
 
   @media @phone {
-    max-width: 50px;
+    min-width: 300px;
     flex: 0;
 
     .AppBar__menu-item {
@@ -121,14 +121,18 @@
 
 .AppBar__menu-item-nav {
   text-transform: uppercase;
+  width: 140px;
   text-decoration: none;
   padding: 10px 20px;
   margin-left: 5px;
   height: 20px;
   cursor: pointer;
   font-weight: 400;
-  font-size: 14px;
   color: @white-dark;
+  font-size: 14px;
+  @media @phone {
+    font-size: 13px;
+  }
 }
 
 &.AppBar--fixed {

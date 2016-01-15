@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid, { Cell } from 'react-mdl/lib/Grid';
+import Grid, {Cell} from 'react-mdl/lib/Grid';
 import Button      from 'react-mdl/lib/Button';
 import HomeList from '../../HomeList/HomeList.js';
 

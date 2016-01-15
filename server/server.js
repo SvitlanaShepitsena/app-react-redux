@@ -5,16 +5,18 @@ import cookieParser from 'cookie-parser';
 
 import React                     from 'react';
 import ReactDOM                  from 'react-dom/server';
-import { Provider }              from 'react-redux';
-import { RoutingContext, match } from 'react-router';
+import {Provider}              from 'react-redux';
+import {RoutingContext, match} from 'react-router';
 import escapeHTML                from 'lodash/string/escape';
 
 import passportConfig from './config/passport';
 
-import { fetchComponentsData,
+import {
+    fetchComponentsData,
     getMetaDataFromState,
     makeRedirectUrl,
-    detectLocale } from './utils';
+    detectLocale
+} from './utils';
 
 import routes         from '../shared/routes.jsx';
 import configureStore from '../shared/store/configureStore';
@@ -58,10 +60,8 @@ configPassport(app, passport);
 configExpress(app, passport);
 configRoutes(app, passport);
 
-
 app.use((req, res) => {
     // Process old links like /en/articles
-
 
     if (req.url.match(/\/[a-z]{2}\//i)) {
         const noLangUrl = req.url.replace(/^\/[a-z]{2}/i, '');

@@ -1,11 +1,11 @@
-import React, { Component, PropTypes } from 'react';
+import React, {Component, PropTypes} from 'react';
 import cx                              from 'classnames';
 import {Link} from 'react-router';
 
 import LanguageSwitch from '../../containers/LanguageSwitch.jsx';
 import LoginDialog    from '../../containers/LoginDialog.jsx';
 import {connect} from 'react-redux';
-import User from '../common/User';
+import User from '../common/User/User.jsx';
 
 import IconButton from '../../../node_modules/react-mdl/lib/IconButton';
 
@@ -77,16 +77,16 @@ class AppBar extends Component {
     }
 
     render() {
-        const { l } = this.context.i18n;
+        const {l} = this.context.i18n;
         const user = this.props.user ? this.props.user.profile : null;
         const {
             title,
             displayRightMenu,
             rightIconName,
             onRightIconClick,
-            } = this.props;
+        } = this.props;
 
-        const { isLoggingIn, isFixedToTop } = this.state;
+        const {isLoggingIn, isFixedToTop} = this.state;
 
         const rootClassNames = cx('AppBar', this.props.className, {
             'AppBar--fixed': isFixedToTop
@@ -127,8 +127,8 @@ class AppBar extends Component {
                             </div>
                             <div className='AppBar__menu-item AppBar__menu-item-icon'>
                                 {!user &&
-                                <img onClick={this.handleLogin} src='static/images/login.png' style={{width:30}}/> }
-
+                                <i className="mdi mdi-login mdi-xl" onClick={this.handleLogin}></i>
+                                }
                             </div>
                         </div>
                     </div>

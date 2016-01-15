@@ -1,4 +1,10 @@
-import {ARTICLES_GET_REQUEST, ARTICLES_GET_SUCCESS, ARTICLES_GET_FAILURE, ADD_ARTICLE, REMOVE_ARTICLE} from '../actions/article';
+import {
+    ARTICLES_GET_REQUEST,
+    ARTICLES_GET_SUCCESS,
+    ARTICLES_GET_FAILURE,
+    ADD_ARTICLE,
+    REMOVE_ARTICLE
+} from '../actions/article';
 
 export default function articles(state = {isFetching: false, articles: [], error: null}, action) {
     switch (action.type) {

@@ -1,11 +1,11 @@
 import React from 'react';
 import cx from 'classnames';
 
-if ( process.env.BROWSER ) {
+if (process.env.BROWSER) {
     require('./LanguageSwitch.less');
 }
 
-export default ({ selectedLanguage, languages, onSelect, className }) => {
+export default ({selectedLanguage, languages, onSelect, className}) => {
     return (
         <div className='LanguageSwitch'>
             <select

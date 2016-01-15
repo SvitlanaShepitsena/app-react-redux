@@ -1,0 +1,32 @@
+@import "../../../assets/palette.less";
+@import "../../../assets/buttons.less";
+@import "../../../assets/media.less";
+
+.User {
+  min-width: 80px;
+  text-align: right;
+  display: inline-block;
+  height: 40px;
+  padding-left: 10px;
+}
+
+.User__menu-item {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.User__avatar {
+  display: inline-block;
+  @media @phone {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.User__logout {
+  margin-top: 26px;
+  display: inline-block;
+  margin-left: 10px;
+  color: @white-darker;
+}
+

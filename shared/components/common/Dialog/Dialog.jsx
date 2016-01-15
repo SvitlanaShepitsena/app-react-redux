@@ -1,5 +1,5 @@
 'use strict';
-import React, { Component, PropTypes } from 'react';
+import React, {Component, PropTypes} from 'react';
 import cx from 'classnames';
 import ReactModal from 'react-modal';
 
@@ -19,7 +19,7 @@ export default class Dialog extends Component {
     };
 
     render() {
-        const { isOpen, title, children, className, onRequestClose } = this.props;
+        const {isOpen, title, children, className, onRequestClose} = this.props;
         const styles = {
             overlay: {
                 backgroundColor: 'rgba(0, 0, 0, 0.5)'

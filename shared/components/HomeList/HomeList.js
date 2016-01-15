@@ -1,6 +1,6 @@
 import React from 'react';
-import Grid, { Cell } from 'react-mdl/lib/Grid';
-import { Card, CardTitle, CardActions } from 'react-mdl/lib/Card';
+import Grid, {Cell} from 'react-mdl/lib/Grid';
+import {Card, CardTitle, CardActions} from 'react-mdl/lib/Card';
 
 if (process.env.BROWSER) {
     require('./HomeList.less');
@@ -11,12 +11,12 @@ export default class HomeList extends React.Component {
     render() {
         return (
             <div className="HomeList">
-                <Grid className='HomeList__content'>
+                <Grid className='HomeList__grid'>
                     <Cell
                         col={4}
                         tablet={6}
                         phone={12}>
-                        <Card className="HomeListCard" shadow={1}>
+                        <Card className="HomeList__card" shadow={1}>
                             <CardTitle className='HomeListCard__head'>
                                 Et dolorum fuga
                             </CardTitle>
@@ -32,7 +32,7 @@ export default class HomeList extends React.Component {
                         col={4}
                         tablet={6}
                         phone={12}>
-                        <Card className="HomeListCard" shadow={1}>
+                        <Card className="HomeList__card" shadow={1}>
                             <CardTitle className='HomeListCard__head'>
                                 Et dolorum fuga
                             </CardTitle>
@@ -48,7 +48,7 @@ export default class HomeList extends React.Component {
                         col={4}
                         tablet={6}
                         phone={12}>
-                        <Card className="HomeListCard" shadow={1}>
+                        <Card className="HomeList__card" shadow={1}>
                             <CardTitle className='HomeListCard__head'>
                                 Et dolorum fuga
                             </CardTitle>

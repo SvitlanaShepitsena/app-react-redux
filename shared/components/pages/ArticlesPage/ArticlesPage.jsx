@@ -1,7 +1,7 @@
 import React from 'react';
 import cx    from 'classnames';
-import { Tab, Tabs }  from 'react-mdl/lib/Tabs';
-import Grid, { Cell } from '../../../../node_modules/react-mdl/lib/Grid';
+import {Tab, Tabs}  from 'react-mdl/lib/Tabs';
+import Grid, {Cell} from '../../../../node_modules/react-mdl/lib/Grid';
 import Spinner        from '../../../../node_modules/react-mdl/lib/Spinner';
 
 import ArticleCard    from '../../ArticleCard/ArticleCard.jsx';
@@ -21,8 +21,8 @@ export default class ArticlesPage extends React.Component {
     };
 
     renderContent = () => {
-        const { l } = this.context.i18n;
-        const { articles, isLoading, isEmpty, onItemClick } = this.props;
+        const {l} = this.context.i18n;
+        const {articles, isLoading, isEmpty, onItemClick} = this.props;
 
         if (isLoading) {
             return <Spinner className='ArticlesPage__spinner'/>;
@@ -37,7 +37,7 @@ export default class ArticlesPage extends React.Component {
         }
 
         return (
-            <Grid className='ArticlesPage__list'>
+            <Grid className='ArticlesPage__grid'>
                 {articles.map(article =>
                     <Cell
                         key={article.youtubeId}
@@ -66,9 +66,9 @@ export default class ArticlesPage extends React.Component {
             selectedCategory,
             isLoading,
             onTabChange,
-            } = this.props;
+        } = this.props;
 
-        const { l } = this.context.i18n;
+        const {l} = this.context.i18n;
 
         const classes = cx('ArticlesPage', {
             'ArticlesPage--loading': isLoading
