@@ -1,17 +1,17 @@
 import React, {Component, PropTypes} from 'react';
 
-import MainLayout from '../../components/MainLayout/MainLayout.jsx';
+import MainLayout from '../components/MainLayout/MainLayout.jsx';
 
-import {footerLinks} from '../../config';
+import {footerLinks} from '../config';
 
-export default class MainLayoutContainer extends Component {
+export default class AppLayoutContainer extends Component {
     state = {
         isWelcomeScreenShown: false
     };
 
     componentDidMount() {
         const skipWelcomeScreen = localStorage.getItem('skipWelcomeScreen');
-        const { skipWelcomeDialog } = this.props.location.query;
+        const {skipWelcomeDialog} = this.props.location.query;
 
         if (!skipWelcomeScreen && !skipWelcomeDialog) {
             this.setState({isWelcomeScreenShown: true});
@@ -27,7 +27,7 @@ export default class MainLayoutContainer extends Component {
     };
 
     render() {
-        const { isWelcomeScreenShown } = this.state;
+        const {isWelcomeScreenShown} = this.state;
         const isEmbedded = this.props.location.query.embed;
 
         return (
