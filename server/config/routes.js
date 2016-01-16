@@ -16,13 +16,13 @@ export default  function (app, passport) {
         passport.authenticate('google', {failureRedirect: '/login'}),
         function (req, res) {
             // Successful authentication, redirect home.
-            res.redirect('/');
+            res.redirect('/profile');
         });
     app.get('/auth/facebook/callback',
         passport.authenticate('facebook', {failureRedirect: '/login'}),
         function (req, res) {
             // Successful authentication, redirect home.
-            res.redirect('/');
+            res.redirect('/profile');
         });
 
     // google auth

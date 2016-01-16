@@ -1,6 +1,7 @@
 import React from 'react';
+import Login from '../../components/pages/LoginPage/LoginPage.jsx';
 
-export default class AboutPage extends React.Component {
+export default class LoginPage extends React.Component {
     // Constructor
     constructor(props) {
         // Running constructor of Parent (React.Component) for binding this to object.
@@ -12,9 +13,11 @@ export default class AboutPage extends React.Component {
         return (
             <div>
                 <h3>
-                    About
+                    Login Form
                 </h3>
-                <hr/>
+
+                <Login></Login>
+
             </div>
         )
     }

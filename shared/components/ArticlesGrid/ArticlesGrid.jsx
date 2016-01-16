@@ -7,7 +7,7 @@ import Spinner        from '../../../../node_modules/react-mdl/lib/Spinner';
 import ArticleCard    from '../../ArticleCard/ArticleCard.jsx';
 
 if (process.env.BROWSER) {
-    require('./ArticlesPage.less');
+    require('./ArticlesGrid.less');
 }
 
 const CATEGORIES = ['ALL', 'ANGULAR', 'REACT', 'REDUX'];

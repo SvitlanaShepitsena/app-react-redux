@@ -46,7 +46,6 @@ export default class LoginDialogContainer extends Component {
             <LoginDialog
                 isOpen={isOpen}
                 onSocialLogin={this.handleSocialLogin}
-                onEmailLogin={this.handleEmailLogin}
                 onRequestClose={onRequestClose}
             />
         );

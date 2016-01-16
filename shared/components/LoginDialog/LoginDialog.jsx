@@ -1,10 +1,10 @@
-import React, { Component, PropTypes } from 'react';
+import React, {Component, PropTypes} from 'react';
 
 import Dialog    from './../common/Dialog/Dialog.jsx';
 import Button    from '../../../node_modules/react-mdl/lib/Button';
 import Icon      from './../common/Icon/Icon.jsx';
 
-import { facebookAppId } from '../../config';
+import {facebookAppId} from '../../config';
 
 if (process.env.BROWSER) {
     require('./LoginDialog.less');
@@ -21,8 +21,8 @@ export default class LoginDialog extends Component {
     };
 
     render() {
-        const { l } = this.context.i18n;
-        const { title, onSocialLogin, onEmailLogin } = this.props;
+        const {l} = this.context.i18n;
+        const {title, onSocialLogin, onEmailLogin} = this.props;
 
         return (
             <div className='LoginDialog'>

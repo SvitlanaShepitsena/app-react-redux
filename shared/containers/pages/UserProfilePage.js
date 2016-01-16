@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class AboutPage extends React.Component {
+export default class UserProfilePage extends React.Component {
     // Constructor
     constructor(props) {
         // Running constructor of Parent (React.Component) for binding this to object.
@@ -12,7 +12,7 @@ export default class AboutPage extends React.Component {
         return (
             <div>
                 <h3>
-                    About
+                    User Profile
                 </h3>
                 <hr/>
             </div>
