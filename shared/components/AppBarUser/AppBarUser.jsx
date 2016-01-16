@@ -2,9 +2,9 @@
 import React from 'react';
 
 if (process.env.BROWSER) {
-    require('./UserAppBar.less');
+    require('./AppBarUser.less');
 }
-export default class UserAppBar extends React.Component {
+export default class AppBarUser extends React.Component {
     constructor(props) {
         super(props);
     }
