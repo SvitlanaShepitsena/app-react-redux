@@ -5,7 +5,7 @@ import {Link} from 'react-router';
 import LanguageSwitch from '../../containers/LanguageSwitch.jsx';
 import LoginDialog    from '../../containers/LoginDialog.jsx';
 import {connect} from 'react-redux';
-import User from '../common/User/User.jsx';
+import User from '../UserAppBar/UserAppBar.jsx';
 
 import IconButton from '../../../node_modules/react-mdl/lib/IconButton';
 
