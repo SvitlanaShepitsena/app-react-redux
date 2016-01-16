@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 
-import MainLayout from '../../components/layouts/MainLayout.jsx';
+import MainLayout from '../../components/MainLayout/MainLayout.jsx';
 
 import {footerLinks} from '../../config';
 
