@@ -1,10 +1,10 @@
 import React from 'react';
 
 if (process.env.BROWSER) {
-    require('./LoginPage.less');
+    require('./LoginSocial.less');
 }
 
-export default class LoginPage extends React.Component {
+export default class LoginSocial extends React.Component {
 
     render() {
 

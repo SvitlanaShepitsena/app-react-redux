@@ -1,13 +1,13 @@
 import React from 'react';
-import Grid, {Cell} from '../../../node_modules/react-mdl/lib/Grid';
-import Button      from '../../../node_modules/react-mdl/lib/Button';
-import HomeList from '../../HomeList/HomeList.js';
+import Grid, {Cell} from 'react-mdl/lib/Grid';
+import Button      from 'react-mdl/lib/Button';
+import HomeList from '../HomeList/HomeList.js';
 
 if (process.env.BROWSER) {
     require('./HomeContent.less');
 }
 
-export default class HomePage extends React.Component {
+export default class HomeContent extends React.Component {
 
     render() {
         return (

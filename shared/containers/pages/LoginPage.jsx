@@ -1,5 +1,5 @@
 import React from 'react';
-import Login from '../../components/pages/LoginPage/LoginPage.jsx';
+import Login from '../../components/LoginSocial/LoginSocial.jsx';
 
 export default class LoginPage extends React.Component {
     // Constructor
