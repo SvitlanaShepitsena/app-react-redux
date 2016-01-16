@@ -1,14 +1,14 @@
 'use strict';
 
 import React, {Component, PropTypes} from 'react';
-import { connect }                   from 'react-redux';
+import {connect}                   from 'react-redux';
 import strformat                     from 'strformat';
 
 import EmbedEvents                            from '../../utils/EmbedEventsUtil';
 import config                                 from '../../config';
-import { sendEvent }                          from '../../utils/googleAnalytics';
+import {sendEvent}                          from '../../utils/googleAnalytics';
 
-import { bindActionCreators } from 'redux';
+import {bindActionCreators} from 'redux';
 import * as articleActions from '../../actions/article';
 import ArticlesPage from '../../components/ArticlesGrid/ArticlesGrid.jsx';
 
