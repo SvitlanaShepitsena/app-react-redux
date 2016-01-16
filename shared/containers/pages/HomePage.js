@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from '../../components/HomeContent/HomeContent.jsx';
+import HomeContent from '../../components/HomeContent/HomeContent.jsx';
 
 export default class HomePage extends React.Component {
     // Constructor
@@ -12,7 +12,7 @@ export default class HomePage extends React.Component {
     render() {
         return (
             <div>
-                <Home></Home>
+                <HomeContent></HomeContent>
             </div>
         )
     }
