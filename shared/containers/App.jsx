@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react';
 
 import AppBar      from '../../shared/components/AppBar/AppBar.jsx';
 
-import { initialize, navigate } from '../utils/googleAnalytics';
+import {initialize, navigate} from '../utils/googleAnalytics';
 
 if (process.env.BROWSER) {
     require('../assets');

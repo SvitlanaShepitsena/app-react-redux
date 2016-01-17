@@ -1,9 +1,9 @@
 import React, {Component, PropTypes} from 'react';
 import strformat from 'strformat';
 import WelcomeDialog from '../components/WelcomeDialog/WelcomeDialog.jsx';
-import { welcomeLinks } from '../config';
-import { sendEvent } from '../utils/googleAnalytics';
-export default class WelcomeDialogContainer extends Component {
+import {welcomeLinks} from '../config';
+import {sendEvent} from '../utils/googleAnalytics';
+export default class WelcomeDialogSmartContainer extends Component {
 
     static contextTypes = {i18n: PropTypes.object};
 
@@ -17,14 +17,14 @@ export default class WelcomeDialogContainer extends Component {
     };
 
     handleDiscoverTests = () => {
-        const { getLocale } = this.context.i18n;
+        const {getLocale} = this.context.i18n;
         const linkToOpen = welcomeLinks.discoverTests;
 
         window.open(linkToOpen, '_blank');
     };
 
     handleCreateTest = () => {
-        const { getLocale } = this.context.i18n;
+        const {getLocale} = this.context.i18n;
         const linkToOpen = strformat(welcomeLinks.createTest, {
             lang: getLocale()
         });
@@ -33,7 +33,7 @@ export default class WelcomeDialogContainer extends Component {
     };
 
     render() {
-        const { isOpen, onDismiss, onClose } = this.props;
+        const {isOpen, onDismiss, onClose} = this.props;
 
         return (
             <WelcomeDialog

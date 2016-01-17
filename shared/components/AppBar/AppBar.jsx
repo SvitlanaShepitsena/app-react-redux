@@ -2,8 +2,8 @@ import React, {Component, PropTypes} from 'react';
 import cx                              from 'classnames';
 import {Link} from 'react-router';
 
-import LanguageSwitch from '../../containers/LanguageSwitch.jsx';
-import LoginDialog    from '../../containers/LoginDialog.jsx';
+import LanguageSwitch from '../../containers/LanguageSwitchSmart.jsx';
+import LoginDialog    from '../../containers/LoginDialogSmart.jsx';
 import {connect} from 'react-redux';
 import User from '../AppBarUser/AppBarUser.jsx';
 

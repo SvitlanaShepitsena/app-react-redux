@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react';
 
 import {Link} from 'react-router';
 import Icon from './../common/Icon/Icon.jsx';
-import ShareDialog from '../../containers/ShareDialog.jsx';
+import ShareDialog from '../../containers/ShareDialogSmart.jsx';
 
 if (process.env.BROWSER) {
     require('./Footer.less');

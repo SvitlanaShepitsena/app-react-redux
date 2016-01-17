@@ -6,7 +6,7 @@ import { footerLinks, companywallShareLink } from '../config';
 
 import { sendEvent } from '../utils/googleAnalytics';
 
-export default class FooterContainer extends Component {
+export default class FooterSmartContainer extends Component {
 
     static contextTypes = {i18n: PropTypes.object};
 

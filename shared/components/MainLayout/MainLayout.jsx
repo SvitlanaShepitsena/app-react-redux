@@ -1,8 +1,8 @@
 import React, {Component, PropTypes} from 'react';
 
 import AppBar      from '../../components/AppBar/AppBar.jsx';
-import WelcomeDialog from '../../containers/WelcomeDialog.jsx';
-import Footer        from '../../containers/Footer.jsx';
+import WelcomeDialog from '../../containers/WelcomeDialogSmart.jsx';
+import Footer        from '../../containers/FooterSmart.jsx';
 
 if (process.env.BROWSER) {
     require('./MainLayout.less');

@@ -1,10 +1,10 @@
-import React, { Component, PropTypes } from 'react';
+import React, {Component, PropTypes} from 'react';
 import ShareDialog from '../components/ShareDialog/ShareDialog.jsx';
-import { facebookAppId } from '../config';
+import {facebookAppId} from '../config';
 
-import { sendEvent } from '../utils/googleAnalytics';
+import {sendEvent} from '../utils/googleAnalytics';
 
-export default class ShareDialogContainer extends Component {
+export default class ShareDialogSmartContainer extends Component {
 
     static propTypes = {
         isOpen: PropTypes.bool.isRequired,
@@ -18,7 +18,7 @@ export default class ShareDialogContainer extends Component {
     };
 
     handleShare = (type) => {
-        const { linkToShare, twitterMessage } = this.props;
+        const {linkToShare, twitterMessage} = this.props;
 
         const linksHash = {
             'google': `https://plus.google.com/share?url=${linkToShare}`,
@@ -37,7 +37,7 @@ export default class ShareDialogContainer extends Component {
     };
 
     render() {
-        const { title, isOpen, onRequestClose } = this.props;
+        const {title, isOpen, onRequestClose} = this.props;
 
         return (
             <ShareDialog

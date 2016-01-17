@@ -1,25 +1,25 @@
 import React, {Component, PropTypes} from 'react';
 import cookie from 'cookie';
 
-import { getSupportedLocales } from '../utils';
-import { sendEvent }           from '../utils/googleAnalytics';
+import {getSupportedLocales} from '../utils';
+import {sendEvent}           from '../utils/googleAnalytics';
 
 import LanguageSwitch from '../components/LanguageSwitch/LanguageSwitch.jsx';
 
 const SUPPORTED_LOCALES = getSupportedLocales();
 
-export default class LanguageSwitchContainer extends Component {
-    static contextTypes = { i18n: PropTypes.object };
+export default class LanguageSwitchSmartContainer extends Component {
+    static contextTypes = {i18n: PropTypes.object};
 
     handleSelectLanguage = (newLocale) => {
-        document.cookie = cookie.serialize('locale', newLocale, { path: '/', maxAge: 900000 });
+        document.cookie = cookie.serialize('locale', newLocale, {path: '/', maxAge: 900000});
 
         sendEvent('language', 'change', newLocale);
         window.location.reload();
     };
 
     render() {
-        const { getLocale } = this.context.i18n;
+        const {getLocale} = this.context.i18n;
 
         return (
             <LanguageSwitch

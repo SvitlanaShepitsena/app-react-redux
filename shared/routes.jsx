@@ -5,7 +5,7 @@ import {Route, Redirect, IndexRoute} from 'react-router';
 
 import App from './containers/App.jsx';
 
-import AppLayout from './containers/AppLayout.jsx';
+import AppLayout from './containers/AppLayoutSmart.jsx';
 
 import UserProfilePage from './containers/pages/UserProfilePage';
 import ArticlesPageContainer from './containers/pages/ArticlesPage.jsx';

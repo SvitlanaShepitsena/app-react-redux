@@ -4,7 +4,7 @@ import MainLayout from '../components/MainLayout/MainLayout.jsx';
 
 import {footerLinks} from '../config';
 
-export default class AppLayoutContainer extends Component {
+export default class AppLayoutSmartContainer extends Component {
     state = {
         isWelcomeScreenShown: false
     };

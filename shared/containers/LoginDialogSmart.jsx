@@ -6,7 +6,7 @@ import LoginDialog from '../components/LoginDialog/LoginDialog.jsx';
 import { socialAuthURL, emailAuthURL } from '../config';
 import { sendEvent } from '../utils/googleAnalytics';
 
-export default class LoginDialogContainer extends Component {
+export default class LoginDialogSmartContainer extends Component {
     static propTypes = {
         isOpen: PropTypes.bool.isRequired,
         onRequestClose: PropTypes.func
