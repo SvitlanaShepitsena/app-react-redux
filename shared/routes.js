@@ -3,16 +3,16 @@
 import React     from 'react';
 import {Route, Redirect, IndexRoute} from 'react-router';
 
-import App from './containers/App.jsx';
+import App from './containers/App.js';
 
-import AppLayout from './containers/AppLayoutSmart.jsx';
+import AppLayout from './containers/AppLayoutSmart.js';
 
 import UserProfilePage from './containers/pages/UserProfilePage';
-import ArticlesPageContainer from './containers/pages/ArticlesPage.jsx';
-import ProjectsPageContainer from './containers/pages/ProjectsPage.jsx';
+import ArticlesPageContainer from './containers/pages/ArticlesPage.js';
+import ProjectsPageContainer from './containers/pages/ProjectsPage.js';
 import HomePage from './containers/pages/HomePage';
 import AboutPage from './containers/pages/AboutPage';
-import LoginPage from './containers/pages/LoginPage.jsx';
+import LoginPage from './containers/pages/LoginPage.js';
 
 export default (
     <Route component={App}>

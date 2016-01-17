@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 
-import AppBar      from '../../shared/components/AppBar/AppBar.jsx';
+import AppBar      from '../components/AppBar/AppBar.js';
 
 import {initialize, navigate} from '../utils/googleAnalytics';
 

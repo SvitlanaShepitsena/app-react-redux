@@ -2,10 +2,10 @@ import React, {Component, PropTypes} from 'react';
 import cx                              from 'classnames';
 import {Link} from 'react-router';
 
-import LanguageSwitch from '../../containers/LanguageSwitchSmart.jsx';
-import LoginDialog    from '../../containers/LoginDialogSmart.jsx';
+import LanguageSwitch from '../../containers/LanguageSwitchSmart.js';
+import LoginDialog    from '../../containers/LoginDialogSmart.js';
 import {connect} from 'react-redux';
-import User from '../AppBarUser/AppBarUser.jsx';
+import User from '../AppBarUser/AppBarUser.js';
 
 import IconButton from '../../../node_modules/react-mdl/lib/IconButton';
 

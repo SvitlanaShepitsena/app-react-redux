@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import cx                            from 'classnames';
 
-import Dialog      from './../common/Dialog/Dialog.jsx';
+import Dialog      from './../common/Dialog/Dialog.js';
 import Button      from 'react-mdl/lib/Button';
 import IconButton  from 'react-mdl/lib/IconButton';
 import Checkbox    from 'react-mdl/lib/Checkbox';

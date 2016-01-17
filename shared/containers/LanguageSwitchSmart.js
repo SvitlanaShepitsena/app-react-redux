@@ -4,7 +4,7 @@ import cookie from 'cookie';
 import {getSupportedLocales} from '../utils';
 import {sendEvent}           from '../utils/googleAnalytics';
 
-import LanguageSwitch from '../components/LanguageSwitch/LanguageSwitch.jsx';
+import LanguageSwitch from '../components/LanguageSwitch/LanguageSwitch.js';
 
 const SUPPORTED_LOCALES = getSupportedLocales();
 

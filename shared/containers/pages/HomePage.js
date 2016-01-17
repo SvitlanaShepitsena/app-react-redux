@@ -1,5 +1,5 @@
 import React from 'react';
-import HomeContent from '../../components/HomeContent/HomeContent.jsx';
+import HomeContent from '../../components/HomeContent/HomeContent.js';
 
 export default class HomePage extends React.Component {
     // Constructor

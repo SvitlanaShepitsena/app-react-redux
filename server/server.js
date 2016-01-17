@@ -18,7 +18,7 @@ import {
     detectLocale
 } from './utils';
 
-import routes         from '../shared/routes.jsx';
+import routes         from '../shared/routes.js';
 import configureStore from '../shared/store/configureStore';
 import i18n           from '../shared/i18n';
 

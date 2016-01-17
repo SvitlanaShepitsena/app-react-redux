@@ -1,8 +1,8 @@
 import React, {Component, PropTypes} from 'react';
 
-import Dialog    from './../common/Dialog/Dialog.jsx';
+import Dialog    from './../common/Dialog/Dialog.js';
 import Button    from '../../../node_modules/react-mdl/lib/Button';
-import Icon      from './../common/Icon/Icon.jsx';
+import Icon      from './../common/Icon/Icon.js';
 
 import { facebookAppId } from '../../config';
 

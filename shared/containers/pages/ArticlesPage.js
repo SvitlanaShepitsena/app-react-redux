@@ -10,7 +10,7 @@ import {sendEvent}                          from '../../utils/googleAnalytics';
 
 import {bindActionCreators} from 'redux';
 import * as articleActions from '../../actions/article';
-import ArticlesPage from '../../components/ArticlesGrid/ArticlesGrid.jsx';
+import ArticlesPage from '../../components/ArticlesGrid/ArticlesGrid.js';
 
 const embedEvents = new EmbedEvents({
     embedOrigin: config.embedOrigin

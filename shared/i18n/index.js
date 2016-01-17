@@ -1,6 +1,6 @@
 'use strict';
 
-import Provider from './Provider.jsx';
+import Provider from './Provider.js';
 import Tools    from './Tools';
 
 export default {

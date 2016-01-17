@@ -10,7 +10,7 @@ import fetch from 'isomorphic-fetch';
 import cookie from 'cookie';
 
 import configureStore from '../shared/store/configureStore';
-import routes from '../shared/routes.jsx';
+import routes from '../shared/routes.js';
 import history from '../shared/history.js';
 import i18n from '../shared/i18n';
 

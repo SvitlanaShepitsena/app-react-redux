@@ -4,7 +4,7 @@ import {Tab, Tabs}  from 'react-mdl/lib/Tabs';
 import Grid, {Cell} from 'react-mdl/lib/Grid';
 import Spinner        from 'react-mdl/lib/Spinner';
 
-import ArticleCard    from '../ArticleCard/ArticleCard.jsx';
+import ArticleCard    from '../ArticleCard/ArticleCard.js';
 
 if (process.env.BROWSER) {
     require('./ArticlesGrid.less');

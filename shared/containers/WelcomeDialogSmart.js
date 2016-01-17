@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import strformat from 'strformat';
-import WelcomeDialog from '../components/WelcomeDialog/WelcomeDialog.jsx';
+import WelcomeDialog from '../components/WelcomeDialog/WelcomeDialog.js';
 import {welcomeLinks} from '../config';
 import {sendEvent} from '../utils/googleAnalytics';
 export default class WelcomeDialogSmartContainer extends Component {
