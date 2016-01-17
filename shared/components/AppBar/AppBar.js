@@ -111,6 +111,9 @@ class AppBar extends Component {
 
                     <span className='AppBar__title'> {title} </span>
                 </div>
+                <div className="AppBar__align">
+
+                </div>
 
                 {
                     displayRightMenu
@@ -120,6 +123,9 @@ class AppBar extends Component {
                         </div>
                         <div >
                             <Link to="/projects" className='AppBar__menu-item-nav'>{l('projects')}</Link>
+                        </div>
+                        <div >
+                            <Link to="/contacts" className='AppBar__menu-item-nav'>{l('contact')}</Link>
                         </div>
                         <LanguageSwitch className='AppBar__lang'/>
 
