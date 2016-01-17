@@ -116,7 +116,10 @@ class AppBar extends Component {
                     displayRightMenu
                         ? <div className='AppBar__right'>
                         <div >
-                            <Link to="/tutorials" className='AppBar__menu-item-nav'>{l('All tutorials')}</Link>
+                            <Link to="/tutorials" className='AppBar__menu-item-nav'>{l('tutorials')}</Link>
+                        </div>
+                        <div >
+                            <Link to="/projects" className='AppBar__menu-item-nav'>{l('projects')}</Link>
                         </div>
                         <LanguageSwitch className='AppBar__lang'/>
 
