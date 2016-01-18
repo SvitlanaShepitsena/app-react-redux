@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import cx                              from 'classnames';
 import {Link} from 'react-router';
+import {Layout, Header, Navigation, Drawer, Content} from 'react-mdl';
 
 import LanguageSwitch from '../../containers/LanguageSwitchSmart.js';
 import LoginDialog    from '../../containers/LoginDialogSmart.js';
@@ -93,7 +94,7 @@ class AppBar extends Component {
         });
 
         return (
-            <div className={rootClassNames}>
+            <Header className={rootClassNames}>
                 <LoginDialog
                     isOpen={isLoggingIn}
                     onRequestClose={this.handleLoginDialogClose}
@@ -117,7 +118,7 @@ class AppBar extends Component {
 
                 {
                     displayRightMenu
-                        ? <div className='AppBar__right'>
+                        ? <Navigation className="AppBar__right">
                         <div >
                             <Link to="/tutorials" className='AppBar__menu-item-nav'>{l('tutorials')}</Link>
                         </div>
@@ -140,10 +141,10 @@ class AppBar extends Component {
                                 }
                             </div>
                         </div>
-                    </div>
+                    </Navigation>
                         : null
                 }
-            </div>
+            </Header>
         );
     }
 }

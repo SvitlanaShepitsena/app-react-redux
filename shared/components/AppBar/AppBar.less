@@ -9,38 +9,8 @@
 
 .AppBar {
   height: 65px;
-  max-width: 100vw;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 16px;
   background-color: @primary-2-color;
   color: @white-darker;
-  z-index: 99;
-  transition-duration: .3s;
-  display: flex;
-  top: 0;
-  align-items: center;
-
-  @media @phone, @tablet {
-    justify-content: space-between;
-  }
-
-  &.AppBar--with-search {
-    .AppBar__left {
-      flex: 2;
-
-      @media @phone {
-        flex: 3;
-      }
-    }
-
-    .AppBar__right {
-      @media @phone {
-        flex: auto !important;
-      }
-
-    }
-  }
 }
 
 .AppBar__title {
@@ -62,26 +32,21 @@
   align-items: center;
   flex: 4;
 
-  .AppBar__logo {
-    max-width: 50px;
-    vertical-align: initial;
-    min-width: 40px;
-  }
+}
+
+.AppBar__logo {
+  max-width: 50px;
+  vertical-align: initial;
+  min-width: 40px;
 }
 
 .AppBar__right {
-  display: flex;
-  height: 40px;
-  align-items: center;
-  justify-content: flex-end;
 
   .AppBar__menu-item-icon {
     display: none;
   }
 
   @media @phone, @tablet {
-    min-width: 300px;
-    flex: 0;
 
     .AppBar__menu-item {
       display: none;
