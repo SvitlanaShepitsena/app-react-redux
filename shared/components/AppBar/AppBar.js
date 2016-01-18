@@ -22,17 +22,16 @@ class AppBar extends Component {
     static propTypes = {
         title: PropTypes.string,
         displayRightMenu: PropTypes.bool,
-        rightIconName: PropTypes.string,
+        displayMenuButton: PropTypes.bool,
         fixOnScroll: PropTypes.bool,
         scrollOffset: PropTypes.number,
-        onRightIconClick: PropTypes.func
     };
 
     static defaultProps = {
         title: '',
         fixOnScroll: true,
         displayRightMenu: true,
-        rightIconName: '',
+        displayMenuButton: false,
         scrollOffset: 0
     };
 
@@ -77,48 +76,42 @@ class AppBar extends Component {
         }
     }
 
+    renderCompanyLogo = () => {
+        return (
+            <div>
+                <Link to="/">
+                    <img src={LOGO_SRC} className='AppBar__logo'/>
+                </Link>
+                <div className="AppBar__title">
+                    Chicago Web App
+                </div>
+            </div>
+        )
+
+    };
+
     render() {
         const {l} = this.context.i18n;
         const user = this.props.user ? this.props.user.profile : null;
         const {
-            title,
             displayRightMenu,
-            rightIconName,
-            onRightIconClick,
         } = this.props;
 
         const {isLoggingIn, isFixedToTop} = this.state;
 
-        const rootClassNames = cx('AppBar', this.props.className, {
-            'AppBar--fixed': isFixedToTop
-        });
-
         return (
-            <Header className={rootClassNames}>
+            <Header title={this.renderCompanyLogo()} className="AppBar">
                 <LoginDialog
                     isOpen={isLoggingIn}
                     onRequestClose={this.handleLoginDialogClose}
                 />
-
-                <div className='AppBar__left'>
-                    {
-                        rightIconName
-                            ? <IconButton name={rightIconName} onClick={onRightIconClick}/>
-                            : <Link to="/">
-
-                            <img src={LOGO_SRC} className='AppBar__logo'/>
-                        </Link>
-                    }
-
-                    <span className='AppBar__title'> {title} </span>
-                </div>
-                <div className="AppBar__align">
-
-                </div>
-
+                <Navigation className='AppBar__left'>
+                    <div>
+                    </div>
+                </Navigation>
                 {
                     displayRightMenu
-                        ? <Navigation className="AppBar__right">
+                        ? < Navigation className="AppBar__right">
                         <div >
                             <Link to="/tutorials" className='AppBar__menu-item-nav'>{l('tutorials')}</Link>
                         </div>

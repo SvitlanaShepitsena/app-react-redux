@@ -2,36 +2,42 @@
 @import "../../assets/palette.less";
 @import "../../assets/media.less";
 
+.AppBar {
+  .mdl-layout__drawer-button {
+    display: none;
+
+    @media @phone, @tablet {
+      display: block;
+    }
+  }
+  .mdl-layout__header-row {
+    padding: 5px;
+    @media @phone, @tablet {
+      padding: 0 40px 0 60px;
+    }
+  }
+}
+
 .AppBar__button {
   line-height: 15;
   color: white !important;
 }
 
-.AppBar {
-  height: 65px;
-  background-color: @primary-2-color;
-  color: @white-darker;
-}
-
 .AppBar__title {
+  vertical-align: top;
+  line-height: 3;
+  display: inline-block;
   font-size: 18px;
-  margin-left: 16px;
   font-weight: 400;
-  .text-ellipsis;
+  padding-left: 10px;
   @media @phone {
-    flex: 0;
     display: none;
   }
 }
 
 .AppBar__left {
+  float: left;
   text-align: left;
-  display: flex;
-  position: relative;
-  top: 0;
-  align-items: center;
-  flex: 4;
-
 }
 
 .AppBar__logo {
@@ -41,13 +47,11 @@
 }
 
 .AppBar__right {
-
   .AppBar__menu-item-icon {
     display: none;
   }
 
   @media @phone, @tablet {
-
     .AppBar__menu-item {
       display: none;
     }
@@ -55,7 +59,6 @@
     .AppBar__menu-item-icon {
       display: block;
     }
-
   }
 }
 
@@ -75,9 +78,6 @@
 }
 
 .AppBar__menu-item {
-  padding: 10px;
-  margin-left: 5px;
-  height: 20px;
   cursor: pointer;
   font-weight: 400;
   font-size: 14px;
@@ -95,12 +95,9 @@
   color: @white-dark;
   font-size: 14px;
   @media @phone {
+    display: none;
     padding: 5px 10px;
     font-size: 13px;
   }
 }
 
-&.AppBar--fixed {
-  position: fixed;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12);
-}

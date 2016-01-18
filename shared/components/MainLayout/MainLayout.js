@@ -24,17 +24,9 @@ export default class MainLayout extends Component {
         const {showWelcomeScreen, showFooter, footerLinks, onWelcomeScreenDismiss} = this.props;
 
         return (
-            <div style={{height: '1200px', position: 'relative'}}>
-                <Layout>
-                    <div
-                        style={{height: '65px'}}>
-                        <AppBar
-                            title={l('Chicago Web App')}
-                            className='ArticlesPage__app-bar'
-                            fixOnScroll={false}
-                            scrollOffset={65}
-                        />
-                    </div>
+            <div style={{minHeight: '1200px', position: 'relative'}}>
+                <Layout fixedHeader>
+                    <AppBar />
                     <Drawer title="Title">
                         <Navigation>
                             <a href="">Link</a>
@@ -47,9 +39,9 @@ export default class MainLayout extends Component {
                         isOpen={showWelcomeScreen}
                         onDismiss={onWelcomeScreenDismiss}
                     />
-                    <Content>
+                    <div>
                         {this.props.children}
-                    </Content>
+                    </div>
                 </Layout>
             </div>
         );

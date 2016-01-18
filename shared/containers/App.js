@@ -1,7 +1,5 @@
 import React, {Component, PropTypes} from 'react';
 
-import AppBar      from '../components/AppBar/AppBar.js';
-
 import {initialize, navigate} from '../utils/googleAnalytics';
 
 if (process.env.BROWSER) {

@@ -16,7 +16,7 @@ export default class LoginDialog extends Component {
     static propTypes = {
         isOpen: PropTypes.bool.isRequired,
         onSocialLogin: PropTypes.func.isRequired,
-        onEmailLogin: PropTypes.func.isRequired,
+        //onEmailLogin: PropTypes.func.isRequired,
         onRequestClose: PropTypes.func.isRequired
     };
 
