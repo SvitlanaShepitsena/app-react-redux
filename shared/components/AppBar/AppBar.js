@@ -83,7 +83,9 @@ class AppBar extends Component {
                     <div >
                         <Link to="/contacts" className='AppBar__menu-item-nav'>{l('contact')}</Link>
                     </div>
-                    <LanguageSwitch className='AppBar__lang'/>
+                    {/*
+                     <LanguageSwitch className='AppBar__lang'/>
+                     */}
                 </Navigation>
                 <AppBarUser user={user} handleLogin={this.handleLogin}/>
             </Header>

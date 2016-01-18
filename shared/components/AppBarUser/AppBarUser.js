@@ -1,5 +1,6 @@
 'use strict';
 import React from 'react';
+import Button      from 'react-mdl/lib/Button';
 
 if (process.env.BROWSER) {
     require('./AppBarUser.less');
@@ -14,7 +15,6 @@ export default class AppBarUser extends React.Component {
 
     render() {
 
-
         const {l} = this.context.i18n;
         const user = this.props.user;
         return (
@@ -22,7 +22,9 @@ export default class AppBarUser extends React.Component {
                 {!user &&
                 <div>
                     <div className='User__login'>
-                        <div onClick={this.props.handleLogin}>{l('Sign up / Sign in')}</div>
+                        <Button raised ripple accent onClick={this.props.handleLogin}>
+                            Sign up / Sign in
+                        </Button>
                     </div>
                     <div className='User__login-mobile'>
                         <i className="mdi mdi-login mdi-xl" onClick={this.props.handleLogin}></i>
