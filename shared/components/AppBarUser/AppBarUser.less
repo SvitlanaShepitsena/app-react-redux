@@ -2,33 +2,48 @@
 @import "../../assets/buttons.less";
 @import "../../assets/media.less";
 
-.User {
-  min-width: 80px;
-  text-align: right;
+.User__login {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+  color: @white-darker;
+  @media @phone, @tablet {
+    display: none;
+  }
+}
+
+.User__login-mobile {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+  color: @white-darker;
+  display: none;
+  @media @phone, @tablet {
+    display: block;
+  }
+}
+
+.User__logout {
+  padding: 5px;
+  color: @white-darker;
+}
+
+.AppBarUser__menu-info {
   display: inline-block;
   height: 40px;
+  margin: 0px;
+  text-align: right;
   padding-left: 10px;
 }
 
 .User__menu-item {
   display: inline-block;
+  width: 40px;
   cursor: pointer;
 }
 
 .User__avatar {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  @media @phone {
-    width: 30px;
-    height: 30px;
-  }
-}
-
-.User__logout {
-  margin-top: 26px;
-  display: inline-block;
-  margin-left: 10px;
-  color: @white-darker;
+  width: 40px;
+  height: 40px;
 }
 

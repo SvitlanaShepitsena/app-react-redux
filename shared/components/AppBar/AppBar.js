@@ -21,8 +21,6 @@ class AppBar extends Component {
 
     static propTypes = {
         title: PropTypes.string,
-        displayRightMenu: PropTypes.bool,
-        displayMenuButton: PropTypes.bool,
         fixOnScroll: PropTypes.bool,
         scrollOffset: PropTypes.number,
     };
@@ -30,26 +28,11 @@ class AppBar extends Component {
     static defaultProps = {
         title: '',
         fixOnScroll: true,
-        displayRightMenu: true,
-        displayMenuButton: false,
         scrollOffset: 0
     };
 
     state = {
-        isFixedToTop: false,
         isLoggingIn: false
-    };
-
-    handleScroll = () => {
-        const scrollTop = (window.pageYOffset !== undefined)
-            ? window.pageYOffset
-            : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-
-        const isFixedToTop = scrollTop > this.props.scrollOffset;
-
-        if (isFixedToTop !== this.state.isFixedToTop) {
-            this.setState({isFixedToTop});
-        }
     };
 
     handleLogin = () => {
@@ -63,18 +46,6 @@ class AppBar extends Component {
             isLoggingIn: false
         });
     };
-
-    componentDidMount() {
-        if (this.props.fixOnScroll) {
-            window.addEventListener('scroll', this.handleScroll);
-        }
-    }
-
-    componentWillUnmount() {
-        if (this.props.fixOnScroll) {
-            window.removeEventListener('scroll', this.handleScroll);
-        }
-    }
 
     renderCompanyLogo = () => {
         return (
@@ -93,11 +64,8 @@ class AppBar extends Component {
     render() {
         const {l} = this.context.i18n;
         const user = this.props.user ? this.props.user.profile : null;
-        const {
-            displayRightMenu,
-        } = this.props;
 
-        const {isLoggingIn, isFixedToTop} = this.state;
+        const {isLoggingIn} = this.state;
 
         return (
             <Header title={this.renderCompanyLogo()} className="AppBar">
@@ -105,28 +73,19 @@ class AppBar extends Component {
                     isOpen={isLoggingIn}
                     onRequestClose={this.handleLoginDialogClose}
                 />
-                {
-                    displayRightMenu
-                        ? < Navigation className="AppBar__right">
-                        <div >
-                            <Link to="/tutorials" className='AppBar__menu-item-nav'>{l('tutorials')}</Link>
-                        </div>
-                        <div >
-                            <Link to="/projects" className='AppBar__menu-item-nav'>{l('projects')}</Link>
-                        </div>
-                        <div >
-                            <Link to="/contacts" className='AppBar__menu-item-nav'>{l('contact')}</Link>
-                        </div>
-                        <LanguageSwitch className='AppBar__lang'/>
-
-                        <div>
-                            {user && <AppBarUser user={user} handleLogin={this.handleLogin}/>}
-
-
-                        </div>
-                    </Navigation>
-                        : null
-                }
+                <Navigation className="AppBar__right">
+                    <div >
+                        <Link to="/tutorials" className='AppBar__menu-item-nav'>{l('tutorials')}</Link>
+                    </div>
+                    <div >
+                        <Link to="/projects" className='AppBar__menu-item-nav'>{l('projects')}</Link>
+                    </div>
+                    <div >
+                        <Link to="/contacts" className='AppBar__menu-item-nav'>{l('contact')}</Link>
+                    </div>
+                    <LanguageSwitch className='AppBar__lang'/>
+                </Navigation>
+                <AppBarUser user={user} handleLogin={this.handleLogin}/>
             </Header>
         );
     }

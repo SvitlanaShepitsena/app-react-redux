@@ -7,6 +7,7 @@ if (process.env.BROWSER) {
 export default class AppBarUser extends React.Component {
 
     static contextTypes = {i18n: React.PropTypes.object};
+
     constructor(props) {
         super(props);
     }
@@ -15,20 +16,19 @@ export default class AppBarUser extends React.Component {
 
         const {l} = this.context.i18n;
         const user = this.props.user;
-        debugger;
         return (
-            <div>
+            <div className="AppBarUser">
                 {!user &&
                 <div>
-                    <div className='AppBar__menu-item'>
+                    <div className='User__login'>
                         <div onClick={this.props.handleLogin}>{l('Sign up / Sign in')}</div>
                     </div>
-                    < div className='AppBar__menu-item-icon'>
+                    <div className='User__login-mobile'>
                         <i className="mdi mdi-login mdi-xl" onClick={this.props.handleLogin}></i>
                     </div>
                 </div>
                 }
-                {user && <ul className="User">
+                {user && <ul className="AppBarUser__menu-info">
                     <li className="User__menu-item">
                         {user.picture && <img className="User__avatar" src={this.props.user.picture}/>
                         }
