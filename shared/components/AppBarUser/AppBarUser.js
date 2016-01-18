@@ -20,24 +20,19 @@ export default class AppBarUser extends React.Component {
         return (
             <div className="AppBarUser">
                 {!user &&
-                <div>
-                    <div className='User__login'>
-                        <Button raised ripple accent onClick={this.props.handleLogin}>
-                            Sign up / Sign in
-                        </Button>
-                    </div>
-                    <div className='User__login-mobile'>
-                        <i className="mdi mdi-login mdi-xl" onClick={this.props.handleLogin}></i>
-                    </div>
+                <div className='AppBarUser__login'>
+                    <Button raised ripple accent onClick={this.props.handleLogin}>
+                        Sign up / Sign in
+                    </Button>
                 </div>
                 }
-                {user && <ul className="AppBarUser__menu-info">
-                    <li className="User__menu-item">
-                        {user.picture && <img className="User__avatar" src={this.props.user.picture}/>
+                {user && <ul className="AppBarAppBarUser__menu-info">
+                    <li className="AppBarUser__menu-item">
+                        {user.picture && <img className="AppBarUser__avatar" src={this.props.user.picture}/>
                         }
                     </li>
-                    <li className="User__menu-item">
-                        <a href="/logout" className="User__logout">
+                    <li className="AppBarUser__menu-item">
+                        <a href="/logout" className="AppBarUser__logout">
                             <i className="mdi mdi-logout mdi-xl"></i>
                         </a>
                     </li>
