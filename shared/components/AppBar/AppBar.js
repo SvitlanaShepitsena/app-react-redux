@@ -17,10 +17,6 @@ if (process.env.BROWSER) {
 const LOGO_SRC = './static/logo.svg';
 
 class AppBar extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     static contextTypes = {i18n: React.PropTypes.object};
 
     static propTypes = {
@@ -97,7 +93,6 @@ class AppBar extends Component {
     render() {
         const {l} = this.context.i18n;
         const user = this.props.user ? this.props.user.profile : null;
-        debugger;
         const {
             displayRightMenu,
         } = this.props;
@@ -124,26 +119,10 @@ class AppBar extends Component {
                         </div>
                         <LanguageSwitch className='AppBar__lang'/>
 
-                        {user &&
+                        <div>
+                            {user && <AppBarUser user={user} handleLogin={this.handleLogin}/>}
 
-                        <div className="AppBar__user-menu-avatar">
-                            {user.picture && <img className="AppBar__user-avatar" src={this.props.user.picture}/>
-                            }
-                        </div>
-                        }
-                        {user &&
-                        <a href="/logout" className='AppBar__user-menu-icon'>
-                            <i className="mdi mdi-logout mdi-xl"></i>
-                        </a>
-                        }
 
-                        <div className='AppBar__menu-item'>
-                            {!user && <div onClick={this.handleLogin}>{l('Sign up / Sign in')}</div>}
-                        </div>
-                        <div className='AppBar__menu-item-icon'>
-                            {!user &&
-                            <i className="mdi mdi-login mdi-xl" onClick={this.handleLogin}></i>
-                            }
                         </div>
                     </Navigation>
                         : null
