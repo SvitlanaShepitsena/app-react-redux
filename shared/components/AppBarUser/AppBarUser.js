@@ -14,6 +14,7 @@ export default class AppBarUser extends React.Component {
 
     render() {
 
+
         const {l} = this.context.i18n;
         const user = this.props.user;
         return (
