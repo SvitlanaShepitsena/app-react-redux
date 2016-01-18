@@ -7,15 +7,12 @@ if (process.env.BROWSER) {
 }
 export default class AppBarUser extends React.Component {
 
-    static contextTypes = {i18n: React.PropTypes.object};
-
     constructor(props) {
         super(props);
     }
 
     render() {
 
-        const {l} = this.context.i18n;
         const user = this.props.user;
         return (
             <div className="AppBarUser">
