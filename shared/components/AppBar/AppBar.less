@@ -18,11 +18,6 @@
   }
 }
 
-.AppBar__button {
-  line-height: 15;
-  color: white !important;
-}
-
 .AppBar__title {
   vertical-align: top;
   line-height: 3;
@@ -46,18 +41,55 @@
   min-width: 40px;
 }
 
-.AppBar__right {
-  .AppBar__menu-item-icon {
-    display: none;
-  }
+.AppBar__menu-item-icon {
+  display: none;
 
+  @media @phone, @tablet {
+    cursor: pointer;
+    text-decoration: none;
+    color: @white-darker;
+    height: 20px;
+    width: 100%;
+    padding: 0px;
+    display: block;
+  }
+  i {
+    display: block;
+  }
+}
+
+.AppBar__user-menu-avatar {
+
+  @media @phone, @tablet {
+    cursor: pointer;
+    text-decoration: none;
+    color: @white-darker;
+    height: 20px;
+    width: 100%;
+    padding: 0px;
+    display: block;
+  }
+}
+.AppBar__user-menu-icon {
+
+  @media @phone, @tablet {
+    cursor: pointer;
+    text-decoration: none;
+    color: @white-darker;
+    height: 20px;
+    width: 100%;
+    padding: 0px;
+    display: block;
+  }
+  i {
+    display: block;
+  }
+}
+
+.AppBar__right {
   @media @phone, @tablet {
     .AppBar__menu-item {
       display: none;
-    }
-
-    .AppBar__menu-item-icon {
-      display: block;
     }
   }
 }
@@ -94,10 +126,20 @@
   font-weight: 400;
   color: @white-dark;
   font-size: 14px;
-  @media @phone {
+  @media @tablet, @phone {
     display: none;
     padding: 5px 10px;
     font-size: 13px;
+  }
+}
+
+.AppBar__user-avatar {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  @media @phone {
+    width: 30px;
+    height: 30px;
   }
 }
 
