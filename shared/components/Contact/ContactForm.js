@@ -1,7 +1,12 @@
 import React, {Component, PropTypes} from 'react';
 import {reduxForm} from 'redux-form';
 export const fields = ['name', 'email', 'message'];
+import {Card, CardTitle, CardActions} from 'react-mdl/lib/Card';
+import Button      from 'react-mdl/lib/Button';
 
+if (process.env.BROWSER) {
+    require('./ContactForm.less');
+}
 class ContactForm extends Component {
     constructor(props) {
         // Running constructor of Parent (React.Component) for binding this to object.
@@ -16,51 +21,51 @@ class ContactForm extends Component {
         submitting: PropTypes.bool.isRequired
     };
 
-    handleSubmit(e){
+    handleSubmit(e) {
         e.preventDefault();
         console.log('Your message have been sent');
         this.props.resetForm();
     }
+
     render() {
         const {
             fields: {name, email, message},
             resetForm,
             submitting
         } = this.props;
-        return (<form>
-                <div>
-                    <label>Name</label>
-                    <div>
-                        <input type="text" placeholder="Name" {...name}/>
+        return (
+            <Card shadow={1} className="ContactForm__Card">
+                <form>
+                    <div className="ContactForm__input-container">
+                        <input className="mdl-textfield__input" type="text" placeholder="Name" {...name}/>
                     </div>
-                </div>
 
-                <div>
-                    <label>Email</label>
-                    <div>
-                        <input type="email" placeholder="Email" {...email}/>
+                    <div className="ContactForm__input-container">
+                        <input className="mdl-textfield__input" type="email" placeholder="Email" {...email}/>
+                        {email.touched && email.error &&
+                        <span className="ContactForm__error">{email.error}</span>}
                     </div>
-                    {email.touched && email.error && <div>{email.error}</div>}
-                </div>
-                <div>
-                    <label>Message</label>
-                    <div>
-            <textarea
-                {...message}
-                value={message.value || ''}
-            />
-                        {message.touched && message.error && <div>{message.error}</div>}
+                    <div className="ContactForm__input-container">
+                        <textarea className="mdl-textfield__input" rows="3" {...message}
+                                  value={message.value || ''}/> {message.touched && message.error &&
+                    <span className="ContactForm__error">{message.error}</span>}
                     </div>
-                </div>
-                <div>
-                    <button disabled={submitting} onClick={this.handleSubmit.bind(this)}>
-                        {submitting ? <i/> : <i/>} Submit
-                    </button>
-                    <button disabled={submitting} onClick={resetForm}>
-                        Clear Values
-                    </button>
-                </div>
-            </form>
+                    <div>
+                        <Button className='ContactForm__button' primary raised ripple
+                                disabled={submitting}
+                                onClick={this.handleSubmit.bind(this)}>
+                            {submitting ? <i/> : <i/>}
+                            Submit
+                        </Button>
+                        <Button miny raised ripple
+                                className="ContactForm__button"
+                                disabled={submitting}
+                                onClick={resetForm}>
+                            Clear
+                        </Button>
+                    </div>
+                </form>
+            </Card>
         );
     }
 }

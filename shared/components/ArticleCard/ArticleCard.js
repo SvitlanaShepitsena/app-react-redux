@@ -1,11 +1,10 @@
 import React, {Component, PropTypes} from 'react';
 import cx                              from 'classnames';
+import {Card, CardTitle, CardActions} from 'react-mdl/lib/Card';
 
 if (process.env.BROWSER) {
     require('./ArticleCard.less');
 }
-
-import {Card, CardTitle, CardActions} from 'react-mdl/lib/Card';
 
 export default class ArticleCard extends Component {
     static contextTypes = {i18n: PropTypes.object};
