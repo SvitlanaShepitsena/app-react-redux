@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactForm from '../../components/Contact/ContactForm.js';
 
 export default class ProjectsPage extends React.Component {
     // Constructor
@@ -15,6 +16,8 @@ export default class ProjectsPage extends React.Component {
                     Contact Us
                 </h3>
                 <hr/>
+                <ContactForm />
+
             </div>
         )
     }
