@@ -77,7 +77,6 @@ export default class ArticlesGrid extends React.Component {
         return (
             <div className={classes}>
                 <div className='ArticlesPage__header'>
-
                     <div className='ArticlesPage__tab-bar'>
                         <Tabs
                             ripple={true}
@@ -92,7 +91,7 @@ export default class ArticlesGrid extends React.Component {
                     </div>
                 </div>
 
-                <div className='ArticlesPage__content'>
+                <div className='ArticlesPage__content' style={{ maxWidth: '1200', margin:' 0 auto' }}>
                     {this.renderContent()}
                 </div>
             </div>

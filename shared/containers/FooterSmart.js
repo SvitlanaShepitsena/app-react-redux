@@ -2,9 +2,9 @@ import React, {Component, PropTypes} from 'react';
 import strformat          from 'strformat';
 
 import Footer from '../components/Footer/Footer.js';
-import { footerLinks, companywallShareLink } from '../config';
+import {footerLinks, companywallShareLink} from '../config';
 
-import { sendEvent } from '../utils/googleAnalytics';
+import {sendEvent} from '../utils/googleAnalytics';
 
 export default class FooterSmartContainer extends Component {
 
@@ -15,7 +15,7 @@ export default class FooterSmartContainer extends Component {
     };
 
     componentWillMount() {
-        const { getLocale } = this.context.i18n;
+        const {getLocale} = this.context.i18n;
         this.links = {};
 
         for (const linkType in footerLinks) {

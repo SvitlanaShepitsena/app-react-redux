@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import {Layout, Header, Navigation, Drawer, Content} from 'react-mdl';
+import {Link} from 'react-router';
 
 import AppBar      from '../AppBar/AppBar.js';
 import WelcomeDialog from '../../containers/WelcomeDialogSmart.js';
@@ -27,21 +28,22 @@ export default class MainLayout extends Component {
             <div style={{minHeight: '1200px', position: 'relative'}}>
                 <Layout fixedHeader>
                     <AppBar />
-                    <Drawer title="Title">
+                    <Drawer>
                         <Navigation>
-                            <a href="">Link</a>
-                            <a href="">Link</a>
-                            <a href="">Link</a>
-                            <a href="">Link</a>
+                            <Link to="/about" className='MainLayout__drawer-nav-link'>{l('about us')}</Link>
+                            <Link to="/tutorials" className='MainLayout__drawer-nav-link'>{l('tutorials')}</Link>
+                            <Link to="/projects" className='MainLayout__drawer-nav-link'>{l('projects')}</Link>
+                            <Link to="/contacts" className='MainLayout__drawer-nav-link'>{l('contact')}</Link>
                         </Navigation>
                     </Drawer>
                     <WelcomeDialog
                         isOpen={showWelcomeScreen}
                         onDismiss={onWelcomeScreenDismiss}
                     />
-                    <div>
+                    <div >
                         {this.props.children}
                     </div>
+                    <Footer/>
                 </Layout>
             </div>
         );

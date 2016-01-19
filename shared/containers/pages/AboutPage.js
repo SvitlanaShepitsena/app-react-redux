@@ -1,4 +1,5 @@
 import React from 'react';
+import {Card} from 'react-mdl';
 
 export default class AboutPage extends React.Component {
     // Constructor
@@ -10,7 +11,7 @@ export default class AboutPage extends React.Component {
 
     render() {
         return (
-            <div>
+            <div style={{ maxWidth: '1200', margin:' 0 auto' }}>
                 <h3>
                     About
                 </h3>

@@ -1,4 +1,5 @@
 @import "../../assets/palette.less";
+@import "../../assets/colors.less";
 @import "../../assets/media.less";
 
 .ArticlesPage {
@@ -11,7 +12,7 @@
 
   .ArticlesPage__tab-bar {
     height: 48px;
-    background-color: @primary-1-color;
+    background-color: @primary-3-color;
     display: flex;
 
     @media @phone {
@@ -33,7 +34,7 @@
     }
 
     .mdl-tabs__tab {
-      color: @white-dark;
+      color: @blue-700;
       font-weight: regular;
       font-size: 14px;
 
@@ -42,7 +43,7 @@
       }
 
       &.is-active {
-        color: @white-darker;
+        color: @blue-500;
       }
 
       .mdl-ripple {
@@ -63,7 +64,6 @@
 
 .ArticlesPage__header {
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12);
-  z-index: 999;
   width: 100%;
 }
 

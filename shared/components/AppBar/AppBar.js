@@ -74,6 +74,9 @@ class AppBar extends Component {
                     onRequestClose={this.handleLoginDialogClose}
                 />
                 <Navigation className="AppBar__right">
+                    <div>
+                        <Link to="/about" className='AppBar__menu-item-nav'>{l('about us')}</Link>
+                    </div>
                     <div >
                         <Link to="/tutorials" className='AppBar__menu-item-nav'>{l('tutorials')}</Link>
                     </div>
