@@ -19,9 +19,10 @@ export default class HomeContent extends React.Component {
                     </div>
 
                     <div className="HomePage__videoContent">
-                        <iframe className="HomePage__Frame"
-                                src="https://www.youtube.com/embed/DKUimZvRyqg"
-                        ></iframe>
+                        <a href="https://www.youtube.com/watch?v=DKUimZvRyqg" target="_blank">
+                            <img className="HomePage__youtube"
+                                 src={"http://img.youtube.com/vi/DKUimZvRyqg/0.jpg"}/>
+                        </a>
                     </div>
                     <div className="HomePage__container--centered">
                         <Button className='HomePage__btn' accent raised ripple>
