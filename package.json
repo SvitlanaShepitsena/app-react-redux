@@ -9,7 +9,7 @@
   },
   "private": true,
   "scripts": {
-    "build": "set NODE_ENV=production&&webpack -p ",
+    "prestart": "set NODE_ENV=production&&webpack -p ",
     "dev": "set NODE_ENV=development&&npm-run-all --parallel devp nodemon",
     "start": "set NODE_ENV=production&&pm2 start server/runner.js --name app-react-redux",
     "nodemon": "nodemon --exec babel-node -- server/runner.js",
