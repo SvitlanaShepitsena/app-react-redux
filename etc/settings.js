@@ -8,9 +8,10 @@ export default function (host) {
     if (process.env.NODE_ENV === 'production') {
         jsSettings = jsSettings.replace(/(3001)|(8050)/g, PORT);
 
-        //if (host.indexOf('local')===-1) {
+        if (host.indexOf('local')===-1) {
             jsSettings = jsSettings.replace(/localhost/g, host);
-        //}
+            jsSettings = jsSettings.replace(/http/g, 'https');
+        }
 
     }
     return JSON.parse(jsSettings);
