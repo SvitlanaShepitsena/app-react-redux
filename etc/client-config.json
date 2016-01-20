@@ -9,6 +9,9 @@
   "facebookAppId": "XXX",
   "gaTrackingCode": "XXX",
   "companywallShareLink": "http://localhost:3001/tutorials",
+  "home":{
+   "title":"Remax Best Company"
+  },
   "welcomeLinks": {
     "aboutCompany": "http://localhost:3001/tutorials",
     "createTest": "http://localhost:3001/tutorials",
