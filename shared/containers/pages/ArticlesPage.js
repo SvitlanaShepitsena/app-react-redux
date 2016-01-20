@@ -4,7 +4,6 @@ import React, {Component, PropTypes} from 'react';
 import {connect}                   from 'react-redux';
 import strformat                     from 'strformat';
 
-import EmbedEvents                            from '../../utils/EmbedEventsUtil';
 import config                                 from '../../config';
 import {sendEvent}                          from '../../utils/googleAnalytics';
 
@@ -12,9 +11,7 @@ import {bindActionCreators} from 'redux';
 import * as articleActions from '../../actions/article';
 import ArticlesPage from '../../components/ArticlesGrid/ArticlesGrid.js';
 
-const embedEvents = new EmbedEvents({
-    embedOrigin: config.embedOrigin
-});
+
 
 class ArticlesPageContainer extends Component {
     static contextTypes = {i18n: PropTypes.object};
