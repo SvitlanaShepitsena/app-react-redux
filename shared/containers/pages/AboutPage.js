@@ -14,7 +14,7 @@ export default class AboutPage extends React.Component {
     render() {
         const about = ogProps.aboutPage;
         return (
-            <div style={{ maxWidth: '1200', margin:' 0 auto' }}>
+            <di>
                 <Helmet
                     title={about.title}
                     meta={[
@@ -50,7 +50,7 @@ export default class AboutPage extends React.Component {
                         maiores alias consequatur aut perferendis doloribus asperiores repellat
                     </p>
                 </article>
-            </div>
+            </di>
         )
     }
 

@@ -6,6 +6,7 @@ import {Route, Redirect, IndexRoute} from 'react-router';
 import App from './containers/App.js';
 
 import AppLayout from './containers/AppLayoutSmart.js';
+import AsideLayout from './components/MainLayout/AsideLayout';
 
 import UserProfilePage from './containers/pages/UserProfilePage';
 import ArticlesPageContainer from './containers/pages/ArticlesPage.js';
@@ -19,12 +20,14 @@ export default (
     <Route component={App}>
         <Route component={AppLayout}>
             <Route component={HomePage} path='/'/>
-            <Route component={ArticlesPageContainer} path='/tutorials'/>
-            <Route component={ProjectsPageContainer} path='/projects'/>
-            <Route component={ContactsPageContainer} path='/contacts'/>
-            <Route component={LoginPage} path='/login'/>
-            <Route component={UserProfilePage} path='/profile'/>
-            <Route component={AboutPage} path='/about'/>
+            <Route component={AsideLayout}>
+                <Route component={ArticlesPageContainer} path='/tutorials'/>
+                <Route component={ProjectsPageContainer} path='/projects'/>
+                <Route component={ContactsPageContainer} path='/contacts'/>
+                <Route component={LoginPage} path='/login'/>
+                <Route component={UserProfilePage} path='/profile'/>
+                <Route component={AboutPage} path='/about'/>
+            </Route>
         </Route>
     </Route>
 );

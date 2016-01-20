@@ -42,8 +42,8 @@ export default class ArticlesGrid extends React.Component {
                     <Cell
                         key={article.youtubeId}
                         align='top'
-                        col={3}
-                        tablet={4}
+                        col={4}
+                        tablet={6}
                         phone={12}>
                         <ArticleCard
                             name={article.title}

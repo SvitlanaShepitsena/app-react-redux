@@ -1,6 +1,5 @@
 import React, {Component, PropTypes} from 'react';
 import {Layout, Header, Navigation, Drawer, Content} from 'react-mdl';
-import Grid, {Cell} from 'react-mdl/lib/Grid';
 import {Link} from 'react-router';
 
 import AppBar      from '../AppBar/AppBar.js';
@@ -41,38 +40,8 @@ export default class MainLayout extends Component {
                         isOpen={showWelcomeScreen}
                         onDismiss={onWelcomeScreenDismiss}
                     />
-                    <div >
-                        <Grid>
-                            <Cell
-                                col={8}
-                                phone={12}>
-                                {this.props.children}
-                            </Cell>
-                            <Cell
-                                col={4}
-                                phone={12}>
-                                <aside>
-                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                                        praesentium
-                                        voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                                        occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt
-                                        mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis
-                                        est et
-                                        expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio
-                                        cumque
-                                        nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas
-                                        assumenda
-                                        est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis
-                                        aut
-                                        rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et
-                                        molestiae non
-                                        recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut
-                                        reiciendis
-                                        voluptatibus maiores alias consequatur aut perferendis doloribus asperiores
-                                        repellat</p>
-                                </aside>
-                            </Cell>
-                        </Grid>
+                    <div>
+                        {this.props.children}
                     </div>
                     <Footer/>
                 </Layout>

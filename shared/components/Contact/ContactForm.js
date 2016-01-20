@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {reduxForm} from 'redux-form';
 export const fields = ['name', 'email', 'message'];
-import {Card, CardTitle, CardActions} from 'react-mdl/lib/Card';
+import {Card, CardText, CardTitle, CardActions} from 'react-mdl/lib/Card';
 import Button      from 'react-mdl/lib/Button';
 
 if (process.env.BROWSER) {
@@ -35,36 +35,42 @@ class ContactForm extends Component {
         } = this.props;
         return (
             <Card shadow={1} className="ContactForm__Card">
-                <form>
-                    <div className="ContactForm__input-container">
-                        <input className="mdl-textfield__input" type="text" placeholder="Name" {...name}/>
-                    </div>
+                <CardTitle>
+                    Send a message
+                </CardTitle>
+                <CardText>
 
-                    <div className="ContactForm__input-container">
-                        <input className="mdl-textfield__input" type="email" placeholder="Email" {...email}/>
-                        {email.touched && email.error &&
-                        <span className="ContactForm__error">{email.error}</span>}
-                    </div>
-                    <div className="ContactForm__input-container">
+                    <form>
+                        <div className="ContactForm__input-container">
+                            <input className="mdl-textfield__input" type="text" placeholder="Name" {...name}/>
+                        </div>
+
+                        <div className="ContactForm__input-container">
+                            <input className="mdl-textfield__input" type="email" placeholder="Email" {...email}/>
+                            {email.touched && email.error &&
+                            <span className="ContactForm__error">{email.error}</span>}
+                        </div>
+                        <div className="ContactForm__input-container">
                         <textarea className="mdl-textfield__input" rows="3" {...message}
                                   value={message.value || ''}/> {message.touched && message.error &&
-                    <span className="ContactForm__error">{message.error}</span>}
-                    </div>
-                    <div>
-                        <Button className='ContactForm__button' primary raised ripple
-                                disabled={submitting}
-                                onClick={this.handleSubmit.bind(this)}>
-                            {submitting ? <i/> : <i/>}
-                            Submit
-                        </Button>
-                        <Button miny raised ripple
-                                className="ContactForm__button"
-                                disabled={submitting}
-                                onClick={resetForm}>
-                            Clear
-                        </Button>
-                    </div>
-                </form>
+                        <span className="ContactForm__error">{message.error}</span>}
+                        </div>
+                    </form>
+                </CardText>
+                <CardActions>
+                    <Button
+                        primary ripple
+                        disabled={submitting}
+                        onClick={this.handleSubmit.bind(this)}>
+                        {submitting ? <i/> : <i/>}
+                        Submit
+                    </Button>
+                    <Button ripple
+                            disabled={submitting}
+                            onClick={resetForm}>
+                        Clear
+                    </Button>
+                </CardActions>
             </Card>
         );
     }

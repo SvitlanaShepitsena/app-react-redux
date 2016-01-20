@@ -10,7 +10,7 @@ import {sendEvent}                          from '../../utils/googleAnalytics';
 
 import {bindActionCreators} from 'redux';
 import * as articleActions from '../../actions/article';
-import ArticlesPage from '../../components/ArticlesGrid/ArticlesGrid.js';
+import ArticlesGrid from '../../components/ArticlesGrid/ArticlesGrid.js';
 
 const embedEvents = new EmbedEvents({
     embedOrigin: config.embedOrigin
@@ -71,7 +71,7 @@ class ArticlesPageContainer extends Component {
 
     render() {
         return (
-            <ArticlesPage
+            <ArticlesGrid
                 articles={this.props.articles}
                 search={this.props.search}
                 linkToShare={this.state.linkToShare}

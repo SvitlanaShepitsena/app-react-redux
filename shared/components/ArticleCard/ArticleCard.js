@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import cx                              from 'classnames';
-import {Card, CardTitle, CardActions} from 'react-mdl/lib/Card';
+import {Card, CardTitle, CardText, CardActions} from 'react-mdl/lib/Card';
 
 if (process.env.BROWSER) {
     require('./ArticleCard.less');
