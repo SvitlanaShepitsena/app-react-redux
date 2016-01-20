@@ -14,7 +14,7 @@
     "dev": "set NODE_ENV=development&&npm-run-all --parallel devp nodemon",
     "start": "set NODE_ENV=production&&node server/runner.js",
     "r": "set NODE_ENV=production&&node server/runner.js",
-    "nodemon": "nodemon --ignore shared --exec babel-node -- server/runner.js",
+    "nodemon": "nodemon --exec babel-node -- server/runner.js",
     "devp": "webpack-dev-server --hot --debug --devtool eval --output-pathinfo --watch --colors --progress  --inline --content-base public --port 8050 --host 0.0.0.0",
     "extract_lang": "./bin/extract_lang.sh",
     "lint": "eslint shared client server",
