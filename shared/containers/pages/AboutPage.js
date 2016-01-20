@@ -31,7 +31,6 @@ export default class AboutPage extends React.Component {
 
                     <h3>Accusamus</h3>
                     <p>
-
                         Est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis
                         voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis
                         debitis

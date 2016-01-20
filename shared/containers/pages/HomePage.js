@@ -1,6 +1,6 @@
 import React from 'react';
 import HomeContent from '../../components/HomeContent/HomeContent.js';
-
+import Helmet from "react-helmet";
 export default class HomePage extends React.Component {
     // Constructor
     constructor(props) {
@@ -12,6 +12,7 @@ export default class HomePage extends React.Component {
     render() {
         return (
             <div>
+                <Helmet title="Chicago Web App"/>
                 <HomeContent></HomeContent>
             </div>
         )

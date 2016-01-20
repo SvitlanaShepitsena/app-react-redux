@@ -80,6 +80,7 @@ app.use((req, res) => {
         console.log(req.user);
     }
     const store = configureStore({user: req.user});
+    let helmet = Helmet.rewind();
 
     const i18nTools = i18nToolsRegistry[locale];
     // Method of React-router that provides renderProp with property components consisting of all components for the particular view
@@ -114,7 +115,8 @@ app.use((req, res) => {
                             state: initialState
                         });
 
-                        return renderHTML({
+                        return renderHTML(helmet,
+                            {
                             componentHTML,
                             initialState,
                             metaData,
@@ -130,7 +132,7 @@ app.use((req, res) => {
         });
 });
 
-function renderHTML({componentHTML, initialState, metaData, config}) {
+function renderHTML(helmet,{componentHTML, initialState, metaData, config}) {
     return `
         <!DOCTYPE html>
         <html>
@@ -138,8 +140,7 @@ function renderHTML({componentHTML, initialState, metaData, config}) {
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="shortcut icon" href="/static/favicon.ico"/>
-            <title>React with Redux Isomorphic App Boilerplate</title>
-
+            ${helmet.title}
             <meta name="description" content="${escapeHTML(metaData.description)}">
             <meta property="og:title" content="${escapeHTML(metaData.title)}" />
             <meta property="og:site_name" content="${escapeHTML(metaData.siteName)}"/>
