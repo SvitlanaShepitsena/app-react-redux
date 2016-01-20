@@ -11,6 +11,9 @@ export default function (host) {
         if (host.indexOf('local')===-1) {
             jsSettings = jsSettings.replace(/localhost/g, host);
             jsSettings = jsSettings.replace(/http/g, 'https');
+            // if on Heroku
+
+            jsSettings.staticUrl = jsSettings.staticUrl.substr(0, -5);
         }
 
     }
