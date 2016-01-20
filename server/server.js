@@ -9,6 +9,7 @@ import {Provider}              from 'react-redux';
 import {RoutingContext, match} from 'react-router';
 import escapeHTML                from 'lodash/string/escape';
 import Helmet from "react-helmet";
+import clientConfig from '../etc/client-config.json';
 
 import passportConfig from './config/passport';
 
@@ -22,8 +23,6 @@ import {
 import routes         from '../shared/routes.js';
 import configureStore from '../shared/store/configureStore';
 import i18n           from '../shared/i18n';
-
-import clientConfig from '../etc/client-config.json';
 
 // Initialize localization
 import ruLocaleData from '../public/static/lang/ru.json';
@@ -116,11 +115,11 @@ app.use((req, res) => {
 
                         return renderHTML(helmet,
                             {
-                            componentHTML,
-                            initialState,
-                            metaData,
-                            config: clientConfig
-                        });
+                                componentHTML,
+                                initialState,
+                                metaData,
+                                config: clientConfig
+                            });
                     })
                     .then(html => {
                         res.cookie('locale', locale, {maxAge: 900000});
@@ -131,7 +130,7 @@ app.use((req, res) => {
         });
 });
 
-function renderHTML(helmet,{componentHTML, initialState, metaData, config}) {
+function renderHTML(helmet, {componentHTML, initialState, metaData, config}) {
     return `
         <!DOCTYPE html>
         <html>
@@ -140,20 +139,9 @@ function renderHTML(helmet,{componentHTML, initialState, metaData, config}) {
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="shortcut icon" href="/static/favicon.ico"/>
             ${helmet.title}
-            <meta name="description" content="${escapeHTML(metaData.description)}">
-            <meta property="og:title" content="${escapeHTML(metaData.title)}" />
-            <meta property="og:site_name" content="${escapeHTML(metaData.siteName)}"/>
-            <meta property="og:image" content="${escapeHTML(metaData.image)}" />
-            <meta property="og:description" content="${escapeHTML(metaData.description)}" />
-            <meta property="og:type" content="test" />
-            <meta property="og:locale" content="en_US" />
-            <meta property="og:locale:alternate" content="ru_RU" />
-            <meta property="og:locale:alternate" content="uk_UA" />
+            ${helmet.meta}
             <meta name="twitter:card" content="summary" />
             <meta name="twitter:site" content="@chicagowebappcom" />
-            <meta name="twitter:title" content="${escapeHTML(metaData.title)}" />
-            <meta name="twitter:description" content="${escapeHTML(metaData.description)}" />
-            <meta name="twitter:image" content="${escapeHTML(metaData.image)}" />
             <meta property="fb:app_id" content="${escapeHTML(config.facebookAppId)}" />
 
             <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>

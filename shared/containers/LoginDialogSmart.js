@@ -1,10 +1,10 @@
-import React, { Component, PropTypes } from 'react';
+import React, {Component, PropTypes} from 'react';
 import strformat                       from 'strformat';
 import escapeHTML                      from 'lodash/string/escape';
 
 import LoginDialog from '../components/LoginDialog/LoginDialog.js';
-import { socialAuthURL, emailAuthURL } from '../config';
-import { sendEvent } from '../utils/googleAnalytics';
+import {socialAuthURL, emailAuthURL} from '../config';
+import {sendEvent} from '../utils/googleAnalytics';
 
 export default class LoginDialogSmartContainer extends Component {
     static propTypes = {
@@ -14,7 +14,7 @@ export default class LoginDialogSmartContainer extends Component {
     static contextTypes = {i18n: PropTypes.object};
 
     handleSocialLogin = (type) => {
-        const { getLocale } = this.context.i18n;
+        const {getLocale} = this.context.i18n;
         console.log();
         const redirectURL = strformat(socialAuthURL, {
             lang: getLocale().toUpperCase(),
@@ -26,7 +26,7 @@ export default class LoginDialogSmartContainer extends Component {
     };
 
     handleEmailLogin = (type) => {
-        const { getLocale } = this.context.i18n;
+        const {getLocale} = this.context.i18n;
         const redirectURL = strformat(emailAuthURL, {
             lang: getLocale().toLowerCase(),
             continueRoute: escapeHTML(`/companywall${window.location.pathname}`)
@@ -40,7 +40,7 @@ export default class LoginDialogSmartContainer extends Component {
     };
 
     render() {
-        const { title, isOpen, onRequestClose } = this.props;
+        const {title, isOpen, onRequestClose} = this.props;
 
         return (
             <LoginDialog

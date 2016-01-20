@@ -2,6 +2,7 @@
   "apiPrefix": "http://localhost:3001/api",
   "backgroundImagesPrefix": "http://localhost:3001/tutorials",
   "staticUrl": "http://localhost:8050",
+  "appTitle": "New Chicago Web App",
   "loginUrl": "http://localhost:3001/tutorials",
   "embedOrigin": "http://localhost:3001/tutorials",
   "socialAuthURL": "http://localhost:3001/auth/{socialType}",
