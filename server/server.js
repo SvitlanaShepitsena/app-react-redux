@@ -40,24 +40,23 @@ import passport from 'passport';
 import configPassport from './config/passport';
 import configExpress from './config/express';
 import configRoutes from './config/routes';
-import mongoose from 'mongoose';
-import connect from './config/db';
 import fs from 'fs';
 
 /* Mongoose */
-connect();
-mongoose.connection.on('error', console.error);
-mongoose.connection.on('disconnected', connect);
-
-fs.readdirSync(__dirname + '/models').forEach(function (file) {
-    if (~file.indexOf('.js')) require(__dirname + '/models/' + file);
-});
+//import connect from './config/db';
+//connect();
+//mongoose.connection.on('error', console.error);
+//mongoose.connection.on('disconnected', connect);
+//
+//fs.readdirSync(__dirname + '/models').forEach(function (file) {
+//    if (~file.indexOf('.js')) require(__dirname + '/models/' + file);
+//});
 const app = express();
 app.use('/static', express.static('public/static'));
 app.use(cookieParser());
 
 configPassport(app, passport);
-configExpress(app, passport);
+//configExpress(app, passport);
 configRoutes(app, passport);
 
 app.use((req, res) => {

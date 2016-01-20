@@ -27,40 +27,48 @@ export default new GoogleStrategy({
     callbackURL: secrets.google.callbackURL,
     passReqToCallback: true
 }, function (req, accessToken, refreshToken, profile, done) {
+    var user = {};
+    user.email = profile._json.emails[0].value;
+    user.google = profile.id;
+    user.tokens.push({kind: 'google', accessToken: accessToken});
+    user.profile.name = profile._json.displayName;
+    user.profile.gender = profile._json.gender;
+    user.profile.picture = profile._json.image.url;
+    done(null, user);
 
-    if (req.user) {
-        User.findOne({google: profile.id}, function (err, existingUser) {
-            if (existingUser) {
-                console.log(existingUser);
-                return done(null, existingUser);
-            } else {
-                User.findById(req.user.id, function (err, user) {
-                    user.google = profile.id;
-                    user.tokens.push({kind: 'google', accessToken: accessToken});
-                    user.profile.name = user.profile.name || profile.displayName;
-                    user.profile.gender = user.profile.gender || profile._json.gender;
-                    user.profile.picture = user.profile.picture || profile._json.picture;
-                    user.save(function (err) {
-                        done(err, user, {message: 'Google account has been linked.'});
-                    });
-                })
-            }
-        });
-    } else {
-        User.findOne({google: profile.id}, function (err, existingUser) {
-            if (existingUser) return done(null, existingUser);
-
-            var user = new User();
-            user.email = profile._json.emails[0].value;
-            user.google = profile.id;
-            user.tokens.push({kind: 'google', accessToken: accessToken});
-            user.profile.name = profile._json.displayName;
-            user.profile.gender = profile._json.gender;
-            user.profile.picture = profile._json.image.url;
-            user.save(function (err) {
-                done(err, user);
-            });
-
-        });
-    }
+    //if (req.user) {
+    //    User.findOne({google: profile.id}, function (err, existingUser) {
+    //        if (existingUser) {
+    //            console.log(existingUser);
+    //            return done(null, existingUser);
+    //        } else {
+    //            User.findById(req.user.id, function (err, user) {
+    //                user.google = profile.id;
+    //                user.tokens.push({kind: 'google', accessToken: accessToken});
+    //                user.profile.name = user.profile.name || profile.displayName;
+    //                user.profile.gender = user.profile.gender || profile._json.gender;
+    //                user.profile.picture = user.profile.picture || profile._json.picture;
+    //                user.save(function (err) {
+    //                    done(err, user, {message: 'Google account has been linked.'});
+    //                });
+    //            })
+    //        }
+    //    });
+    //} else {
+    //    User.findOne({google: profile.id}, function (err, existingUser) {
+    //        if (existingUser) return done(null, existingUser);
+    //
+    //        var user = new User();
+    //        user.email = profile._json.emails[0].value;
+    //        user.google = profile.id;
+    //        user.tokens.push({kind: 'google', accessToken: accessToken});
+    //        user.profile.name = profile._json.displayName;
+    //        user.profile.gender = profile._json.gender;
+    //        user.profile.picture = profile._json.image.url;
+    //        user.save(function (err) {
+    //            done(err, user);
+    //        });
+    //
+    //    });
+    //}
 });

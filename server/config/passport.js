@@ -12,13 +12,11 @@ export default function(app, passport, config) {
     done(null, user);
   });
 
-  passport.deserializeUser(function(id, done) {
+  passport.deserializeUser(function(user, done) {
     console.log('deserializeUser')
+    done(null, user);
 
-    User.findById(id, function(err, user) {
-      console.log(user);
-      done(err, user);
-    });
+
   });
 
   //use the following strategies
