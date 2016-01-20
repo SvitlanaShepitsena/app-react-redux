@@ -9,7 +9,6 @@ import {Provider}              from 'react-redux';
 import {RoutingContext, match} from 'react-router';
 import escapeHTML                from 'lodash/string/escape';
 import Helmet from "react-helmet";
-import clientConfig from '../etc/client-config.json';
 
 import passportConfig from './config/passport';
 
@@ -23,6 +22,9 @@ import {
 import routes         from '../shared/routes.js';
 import configureStore from '../shared/store/configureStore';
 import i18n           from '../shared/i18n';
+
+import clientConfig from '../etc/settings';
+import PORT from './port';
 
 // Initialize localization
 import ruLocaleData from '../public/static/lang/ru.json';
@@ -169,8 +171,6 @@ function renderHTML(helmet, {componentHTML, initialState, metaData, config}) {
         </html>
     `;
 }
-
-const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
     console.log('Server listening on: ' + PORT);
