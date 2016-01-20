@@ -10,7 +10,7 @@
   "private": true,
   "scripts": {
     "build": "set NODE_ENV=production&&webpack -p --progress",
-    "prestart2": "npm run build",
+    "prestart": "npm run build",
     "start": "set NODE_ENV=production&&node server/runner.js",
     "r": "set NODE_ENV=production&&node server/runner.js",
     "nodemon": "nodemon --exec babel-node -- server/runner.js",
