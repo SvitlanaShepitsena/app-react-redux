@@ -8,7 +8,7 @@
   "emailAuthURL": "http://localhost:3001/auth/local/",
   "facebookAppId": "XXX",
   "gaTrackingCode": "XXX",
-  "companywallShareLink": "http://localhost:3001/tutorials",
+  "companyShareLink": "http://localhost:3001/tutorials",
   "welcomeLinks": {
     "createTest": "http://localhost:3001/tutorials",
     "aboutCompany": "http://localhost:3001/tutorials",

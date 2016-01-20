@@ -140,8 +140,6 @@ function renderHTML(helmet, {componentHTML, initialState, metaData, config}) {
             <link rel="shortcut icon" href="/static/favicon.ico"/>
             ${helmet.title}
             ${helmet.meta}
-            <meta name="twitter:card" content="summary" />
-            <meta name="twitter:site" content="@chicagowebappcom" />
             <meta property="fb:app_id" content="${escapeHTML(config.facebookAppId)}" />
 
             <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
