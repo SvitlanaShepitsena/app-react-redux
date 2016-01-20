@@ -70,12 +70,12 @@
     "redux-router": "^0.1.0",
     "redux-thunk": "^1.0.0",
     "secrets": "^0.1.0",
+    "babel-core": "5.*",
     "strformat": "0.0.7"
   },
   "devDependencies": {
     "autoprefixer-loader": "*",
     "babel": "5.*",
-    "babel-core": "5.*",
     "babel-eslint": "^4.1.1",
     "babel-loader": "5.*",
     "babel-plugin-react-autoprefix": "^0.2.6",
