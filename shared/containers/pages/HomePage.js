@@ -12,7 +12,7 @@ export default class HomePage extends React.Component {
     render() {
         return (
             <div>
-                <Helmet title="Chicago Web App1"/>
+                <Helmet title="Chicago Web Apps"/>
                 <HomeContent></HomeContent>
             </div>
         )

@@ -24,6 +24,10 @@ module.exports = {
         filename: "main.js",
         publicPath: "static/build/"
     },
+    watchOptions: {
+        aggregateTimeout: 100,
+        poll: 1000
+    },
     module: {
         loaders: [
             {
