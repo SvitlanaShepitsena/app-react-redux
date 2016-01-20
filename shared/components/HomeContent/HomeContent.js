@@ -21,7 +21,7 @@ export default class HomeContent extends React.Component {
                     <div className="HomePage__videoContent">
                         <a href="https://www.youtube.com/watch?v=DKUimZvRyqg" target="_blank">
                             <img className="HomePage__youtube"
-                                 src={"http://img.youtube.com/vi/DKUimZvRyqg/0.jpg"}/>
+                                 src={"https://img.youtube.com/vi/DKUimZvRyqg/0.jpg"}/>
                         </a>
                     </div>
                     <div className="HomePage__container--centered">

@@ -50,7 +50,7 @@ export default class ArticlesGrid extends React.Component {
                         >
                             <div>
                                 <img className="ArticlesGrid__youtube"
-                                     src={"http://img.youtube.com/vi/" + article.youtubeId + "/0.jpg"}/>
+                                     src={"https://img.youtube.com/vi/" + article.youtubeId + "/0.jpg"}/>
                             </div>
 
                         </ArticleCard>

@@ -5,6 +5,7 @@ import MainLayout from '../components/MainLayout/MainLayout.js';
 import {footerLinks} from '../config';
 
 export default class AppLayoutSmartContainer extends Component {
+
     state = {
         isWelcomeScreenShown: false
     };
@@ -28,13 +29,12 @@ export default class AppLayoutSmartContainer extends Component {
 
     render() {
         const {isWelcomeScreenShown} = this.state;
-        const isEmbedded = this.props.location.query.embed;
 
         return (
             <MainLayout
-                showWelcomeScreen={!isEmbedded && isWelcomeScreenShown}
+                showWelcomeScreen={isWelcomeScreenShown}
                 onWelcomeScreenDismiss={this.handleWelcomeScreenDismiss}
-                showFooter={!isEmbedded}>
+                showFooter={true}>
                 {this.props.children}
             </MainLayout>
         );

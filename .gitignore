@@ -1,6 +1,5 @@
 node_modules/
 /etc/no-share.json
-public/static/build/
 public/static/config.js
 npm-debug.log
 src/templates/
