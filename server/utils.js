@@ -4,7 +4,7 @@ import geoip       from 'geoip-lite';
 import strformat   from 'strformat';
 
 import clientConfig                     from '../etc/client-config.json';
-import { getSupportedLocales, sprintf } from '../shared/utils';
+import {getSupportedLocales, sprintf} from '../shared/utils';
 
 export function fetchComponentsData(dispatch, components, params, query) {
     // Select components that have assync request for the specific route
@@ -23,9 +23,9 @@ export function fetchComponentsData(dispatch, components, params, query) {
     return Promise.all(promises);
 }
 
-export function getMetaDataFromState({ route, state, lang = 'en' }) {
+export function getMetaDataFromState({route, state, lang = 'en'}) {
     if (route === '/articles/:id') {
-        const { name, message, pictureURL } = state.currentArticle.article;
+        const {name, message, pictureURL} = state.currentArticle.article;
         return {
             title: name,
             siteName: "Company Name",
@@ -34,29 +34,6 @@ export function getMetaDataFromState({ route, state, lang = 'en' }) {
         };
     }
 
-    if (route === '/result/:id/:userId' && state.currentArticle.article) {
-        const sharePhrases = {
-            ru: 'Я сдал тест "{name}" на {score}%',
-            uk: 'Я склав тест "{name}" на {score}%',
-            en: 'I have passed test "{name}" and gained {score}%'
-        };
-
-        const { isPassed, name, pictureURL, message } = state.currentArticle.article;
-
-        return {
-            title: strformat(sharePhrases[lang], {name}),
-            siteName: "Company Name",
-            image: pictureURL ? pictureURL.replace('svg', 'png') : '',
-            description: message
-        };
-    }
-
-    return {
-        title: 'Company Wall',
-        siteName: 'Company Name',
-        image: 'http://res.cloudinary.com/svitlana/image/upload/v1452030293/chicago-app/logo.png',
-        description: 'React with Redux Isomorphic App Boilerplate  ...'
-    };
 }
 
 export function makeRedirectUrl({originalUrl}) {
