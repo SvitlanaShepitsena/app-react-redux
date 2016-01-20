@@ -9,6 +9,7 @@
   },
   "private": true,
   "scripts": {
+    "prebuild": "rimraf public/static/build",
     "build": "set NODE_ENV=production&&webpack -p ",
     "dev": "set NODE_ENV=development&&npm-run-all --parallel devp nodemon",
     "start": "set NODE_ENV=production&&node server/runner.js",
@@ -95,6 +96,7 @@
     "redux-devtools": "^3.0.1",
     "redux-devtools-dock-monitor": "^1.0.1",
     "redux-devtools-log-monitor": "^1.0.1",
+    "rimraf": "^2.5.0",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.6",
     "webpack": "^1.12.4",
