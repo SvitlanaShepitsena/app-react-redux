@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from "react-helmet";
 import {Card} from 'react-mdl';
+import {appType, ogProps} from "../../config.js";
 
 export default class AboutPage extends React.Component {
     // Constructor
@@ -11,9 +12,19 @@ export default class AboutPage extends React.Component {
     }
 
     render() {
+        const about = ogProps.aboutPage;
         return (
             <div style={{ maxWidth: '1200', margin:' 0 auto' }}>
-                <Helmet title="About our Company"/>
+                <Helmet
+                    title={about.title}
+                    meta={[
+                    {"property": "og:url", "content": `${about.url}`},
+                    {"property": "og:type", "content": `${appType}`},
+                    {"property": "og:title", "content": `${about.title}`},
+                    {"property": "og:image", "content": `${about.image}`},
+                    {"property": "og:description", "content": `${about.description}`}
+                ]}
+                />
                 <h1>About vero eos et accusamus et iusto odio dignissimos ducimus</h1>
                 <hr/>
                 <article>

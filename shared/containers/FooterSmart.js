@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import strformat          from 'strformat';
 
 import Footer from '../components/Footer/Footer.js';
-import {footerLinks, companywallShareLink} from '../config';
+import {footerLinks, companyShareLink} from '../config';
 
 import {sendEvent} from '../utils/googleAnalytics';
 
@@ -24,7 +24,7 @@ export default class FooterSmartContainer extends Component {
             });
         }
 
-        this.linkToShare = companywallShareLink;
+        this.linkToShare = companyShareLink;
     }
 
     handleLinkClick = (type) => {
