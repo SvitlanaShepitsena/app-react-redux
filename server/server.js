@@ -8,6 +8,7 @@ import ReactDOM                  from 'react-dom/server';
 import {Provider}              from 'react-redux';
 import {RoutingContext, match} from 'react-router';
 import escapeHTML                from 'lodash/string/escape';
+import Helmet from "react-helmet";
 
 import passportConfig from './config/passport';
 

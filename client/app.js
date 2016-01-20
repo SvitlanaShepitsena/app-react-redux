@@ -4,8 +4,8 @@ const DEFAULT_LOCALE = 'en';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { Router } from 'react-router';
+import {Provider} from 'react-redux';
+import {Router} from 'react-router';
 import fetch from 'isomorphic-fetch';
 import cookie from 'cookie';
 

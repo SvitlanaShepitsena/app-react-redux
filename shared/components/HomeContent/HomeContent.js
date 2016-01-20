@@ -15,7 +15,7 @@ export default class HomeContent extends React.Component {
                 <div className="HomePage__top">
                     <div className="HomePage__content--centered">
                         <h1>React with Redux 201</h1>
-                        <h3>Best Practices for Production Applications</h3>
+                        <h2>Best Practices for Production Applications</h2>
                     </div>
 
                     <div className="HomePage__videoContent">

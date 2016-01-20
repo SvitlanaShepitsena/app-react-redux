@@ -2,7 +2,7 @@
 @import "../../assets/colors.less";
 @import "../../assets/media.less";
 
-.ArticlesPage {
+.ArticlesGrid {
   background-color: @background-color;
   width: 100%;
   overflow: hidden;
@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
 
-  .ArticlesPage__tab-bar {
+  .ArticlesGrid__tab-bar {
     height: 48px;
     background-color: @cards-color;
     display: flex;
@@ -57,29 +57,24 @@
   }
 }
 
-.ArticlesPage__youtube {
+.ArticlesGrid__youtube {
   width: 100% !important;
   height: auto !important;
 }
 
-.ArticlesPage__header {
+.ArticlesGrid__header {
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12);
   width: 100%;
 }
 
-.ArticlesPage__title {
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.ArticlesPage__content {
+.ArticlesGrid__content {
   margin-top: 20px;
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.ArticlesPage__empty-state {
+.ArticlesGrid__empty-state {
   font-size: 20px;
   text-align: center;
   max-width: 500px;
@@ -89,12 +84,12 @@
   font-weight: 300;
 }
 
-.ArticlesPage__grid {
+.ArticlesGrid__grid {
   width: 100%;
   margin: 0 auto;
 }
 
-.ArticlesPage__spinner {
+.ArticlesGrid__spinner {
   margin: 10px;
 }
 

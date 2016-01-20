@@ -25,19 +25,19 @@ export default class ArticlesGrid extends React.Component {
         const {articles, isLoading, isEmpty, onItemClick} = this.props;
 
         if (isLoading) {
-            return <Spinner className='ArticlesPage__spinner'/>;
+            return <Spinner className='ArticlesGrid__spinner'/>;
         }
 
         if (isEmpty) {
             return (
-                <div className='ArticlesPage__empty-state'>
+                <div className='ArticlesGrid__empty-state'>
                     {l('There are no articles in this category yet')}
                 </div>
             );
         }
 
         return (
-            <Grid className='ArticlesPage__grid'>
+            <Grid className='ArticlesGrid__grid'>
                 {articles.map(article =>
                     <Cell
                         key={article.youtubeId}
@@ -45,12 +45,11 @@ export default class ArticlesGrid extends React.Component {
                         col={3}
                         tablet={4}
                         phone={12}>
-                        <ArticleCard>
-                            <p>
-                                {article.title}
-                            </p>
+                        <ArticleCard
+                            name={article.title}
+                        >
                             <div>
-                                <img className="ArticlesPage__youtube"
+                                <img className="ArticlesGrid__youtube"
                                      src={"http://img.youtube.com/vi/" + article.youtubeId + "/0.jpg"}/>
                             </div>
 
@@ -76,12 +75,12 @@ export default class ArticlesGrid extends React.Component {
 
         return (
             <div className={classes}>
-                <div className='ArticlesPage__header'>
-                    <div className='ArticlesPage__tab-bar'>
+                <div className='ArticlesGrid__header'>
+                    <div className='ArticlesGrid__tab-bar'>
                         <Tabs
                             ripple={true}
                             activeTab={selectedCategory ? CATEGORIES.indexOf(selectedCategory) : 0}
-                            className='ArticlesPage__tabs'
+                            className='ArticlesGrid__tabs'
                             onChange={(index) => onTabChange(CATEGORIES[index])}>
                             <Tab>{l('All Tutorials')}</Tab>
                             <Tab>{l('Angular')}</Tab>
@@ -90,8 +89,11 @@ export default class ArticlesGrid extends React.Component {
                         </Tabs>
                     </div>
                 </div>
-
-                <div className='ArticlesPage__content' style={{ maxWidth: '1200', margin:' 0 auto' }}>
+                <div style={{ maxWidth: '1200', margin:' 0 auto' }}>
+                    <h2 style={{textAlign:'left'}}>All Tutorials</h2>
+                    <hr/>
+                </div>
+                <div className='ArticlesGrid__content'>
                     {this.renderContent()}
                 </div>
             </div>

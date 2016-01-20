@@ -11,9 +11,9 @@ export default class ProjectsPage extends React.Component {
     render() {
         return (
             <div style={{ maxWidth: '1200', margin:' 0 auto' }}>
-                <h3>
+                <h2>
                     Our Projects
-                </h3>
+                </h2>
                 <hr/>
             </div>
         )
