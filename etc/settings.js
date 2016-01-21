@@ -9,7 +9,7 @@ export default function (host) {
         jsSettings = jsSettings.replace(/(3001)|(8050)/g, PORT);
         if (host.indexOf('local') === -1) {
             jsSettings = jsSettings.replace(/localhost/g, host);
-            jsSettings = jsSettings.replace(/http/g, 'https');
+            jsSettings = jsSettings.replace(/http:/g, 'https:');
             // if on Heroku
 
         }
