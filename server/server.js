@@ -58,7 +58,7 @@ app.use('/static', express.static('public/static'));
 app.use(cookieParser());
 
 configPassport(app, passport);
-//configExpress(app, passport);
+configExpress(app, passport);
 configRoutes(app, passport);
 
 app.use((req, res) => {

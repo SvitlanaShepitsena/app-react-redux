@@ -52,12 +52,9 @@ class ArticlesPageContainer extends Component {
         const currentQuery = this.props.location.query;
         const nextQuery = nextProps.location.query;
 
-        const needToReloadData = currentQuery.search !== nextQuery.search
-            || currentQuery.category !== nextQuery.category;
 
-        if (needToReloadData) {
-            this.props.dispatch(loadArticles(nextProps.params, nextQuery));
-        }
+
+
     }
 
     render() {

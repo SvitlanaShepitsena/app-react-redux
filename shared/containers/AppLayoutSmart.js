@@ -32,7 +32,7 @@ export default class AppLayoutSmartContainer extends Component {
 
         return (
             <MainLayout
-                showWelcomeScreen={isWelcomeScreenShown}
+                showWelcomeScreen={false}
                 onWelcomeScreenDismiss={this.handleWelcomeScreenDismiss}
                 showFooter={true}>
                 {this.props.children}
