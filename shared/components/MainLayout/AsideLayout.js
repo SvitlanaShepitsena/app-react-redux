@@ -23,8 +23,8 @@ export default class AsideLayout extends Component {
                         col={4}
                         phone={12}>
                         <aside>
-                            <a style={{textAlign:'center'}} href="http://tleunen.github.io/react-mdl/#/cards">
-                                <h4 style={{textAlign:'center'}}>
+                            <a style={{textAlign:'center', color:'#393939'}} href="http://tleunen.github.io/react-mdl/#/cards">
+                                <h4>
                                     React-MDL
                                     Cards
                                 </h4>
