@@ -80,7 +80,6 @@ app.use((req, res) => {
         console.log(req.user);
     }
     const store = configureStore({user: req.user});
-    let helmet = Helmet.rewind();
 
     const i18nTools = i18nToolsRegistry[locale];
     // Method of React-router that provides renderProp with property components consisting of all components for the particular view
@@ -108,6 +107,7 @@ app.use((req, res) => {
                             </Provider>
                         );
 
+                        let helmet = Helmet.rewind();
                         const initialState = store.getState();
                         const metaData = getMetaDataFromState({
                             lang: locale,

@@ -1,49 +1,49 @@
 {
-  "apiPrefix": "http://localhost:3001/api",
-  "backgroundImagesPrefix": "http://localhost:3001/tutorials",
+  "apiPrefix": "https://app-react-redux.herokuapp.com/api",
+  "backgroundImagesPrefix": "https://app-react-redux.herokuapp.com/tutorials",
   "staticUrl": "http://localhost:8050",
   "appTitle": "Chicago Web App",
   "appType": "website",
-  "appUrl": "http://localhost:3001",
+  "appUrl": "https://app-react-redux.herokuapp.com",
   "appImage": "http://res.cloudinary.com/svitlana/image/upload/v1453315485/react-logo_k4hgov.png",
-  "loginUrl": "http://localhost:3001/tutorials",
-  "embedOrigin": "http://localhost:3001/tutorials",
-  "socialAuthURL": "http://localhost:3001/auth/{socialType}",
-  "emailAuthURL": "http://localhost:3001/auth/local/",
+  "loginUrl": "https://app-react-redux.herokuapp.com/tutorials",
+  "embedOrigin": "https://app-react-redux.herokuapp.com/tutorials",
+  "socialAuthURL": "https://app-react-redux.herokuapp.com/auth/{socialType}",
+  "emailAuthURL": "https://app-react-redux.herokuapp.com/auth/local/",
   "facebookAppId": "",
   "gaTrackingCode": "XXX",
-  "companyShareLink": "http://localhost:3001",
+  "companyShareLink": "https://app-react-redux.herokuapp.com",
   "ogProps": {
     "homePage": {
       "image": "http://res.cloudinary.com/svitlana/image/upload/v1453315485/react-logo_k4hgov.png",
       "description": "React with Redux 201. Best Practices for Production Applications"
     },
     "aboutPage": {
-      "url": "http://localhost:3001/about",
+      "url": "https://app-react-redux.herokuapp.com/about",
       "title": "About us",
       "image": "http://res.cloudinary.com/svitlana/image/upload/v1453315485/react-logo_k4hgov.png",
       "description": "About vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium."
     },
     "contactsPage": {
-      "url": "http://localhost:3001/contacts",
+      "url": "https://app-react-redux.herokuapp.com/contacts",
       "title": "Contact us",
       "image": "http://res.cloudinary.com/svitlana/image/upload/v1453315485/react-logo_k4hgov.png",
       "description": "Contact itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus."
     }
   },
   "welcomeLinks": {
-    "aboutCompany": "http://localhost:3001/tutorials",
-    "createTest": "http://localhost:3001/tutorials",
-    "discoverTests": "http://localhost:3001/tutorials"
+    "aboutCompany": "https://app-react-redux.herokuapp.com/tutorials",
+    "createTest": "https://app-react-redux.herokuapp.com/tutorials",
+    "discoverTests": "https://app-react-redux.herokuapp.com/tutorials"
   },
   "footerLinks": {
     "twitter": "http://twitter.com",
     "facebook": "https://www.facebook.com",
     "youtube": "https://www.youtube.com/channel/UCLzTnoBTQuSSg7DUNRXlmtg/playlists",
-    "supportPage": "http://localhost:3001/tutorials",
-    "suggestIdea": "http://localhost:3001/tutorials",
-    "aboutCompany": "http://localhost:3001/tutorials",
-    "ourTeam": "http://localhost:3001/tutorials",
+    "supportPage": "https://app-react-redux.herokuapp.com/tutorials",
+    "suggestIdea": "https://app-react-redux.herokuapp.com/tutorials",
+    "aboutCompany": "https://app-react-redux.herokuapp.com/tutorials",
+    "ourTeam": "https://app-react-redux.herokuapp.com/tutorials",
     "helpMe": "mailto:support@appexample.com"
   }
 }
