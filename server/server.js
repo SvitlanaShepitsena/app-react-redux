@@ -144,7 +144,7 @@ function renderHTML(helmet, {componentHTML, initialState, metaData, config}) {
         <html>
         <head>
             <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="shortcut icon" href="/static/favicon.ico"/>
             ${helmet.title}
             ${helmet.meta}
