@@ -1,9 +1,9 @@
 'use strict';
 
 import express from 'express';
+import compress from 'compression';
 import cookieParser from 'cookie-parser';
 
-import React                     from 'react';
 import ReactDOM                  from 'react-dom/server';
 import {Provider}              from 'react-redux';
 import {RoutingContext, match} from 'react-router';
@@ -55,6 +55,7 @@ import fs from 'fs';
 //    if (~file.indexOf('.js')) require(__dirname + '/models/' + file);
 //});
 const app = express();
+app.use(compress());
 app.use('/static', express.static('public/static'));
 app.use(cookieParser());
 
