@@ -56,6 +56,7 @@ export default class AsideLayout extends Component {
                                       margin:"0px auto 16px auto",
                                       height: '256px', background:
                                       'url(https://www.getmdl.io/assets/demos/image_card.jpg) center / cover' }}>
+
                                     <CardTitle expand/>
                                     <CardActions
                                         style={{height: '52px', padding: '16px', background: 'rgba(0,0,0,0.2)'}}>
