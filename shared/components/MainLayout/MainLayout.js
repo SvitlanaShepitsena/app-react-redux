@@ -20,6 +20,12 @@ export default class MainLayout extends Component {
         onWelcomeScreenClose: PropTypes.func
     };
 
+    toggleDrawer(e) {
+        document.querySelector('.mdl-layout__drawer').classList.remove('is-visible');
+        let dimmer=document.querySelector('.mdl-layout__obfuscator');
+        dimmer.classList.remove('is-visible');
+    }
+
     render() {
         const {l} = this.context.i18n;
         const {showWelcomeScreen, showFooter, footerLinks, onWelcomeScreenDismiss} = this.props;
@@ -27,7 +33,7 @@ export default class MainLayout extends Component {
         return (
             <Layout fixedHeader style={{minHeight: '1400px',height:"auto", position: 'relative'}}>
                 <AppBar />
-                <Drawer>
+                <Drawer onClick={this.toggleDrawer.bind(this)}>
                     <Navigation>
                         <Link to="/about" className='MainLayout__drawer-nav-link'>{l('about us')}</Link>
                         <Link to="/tutorials" className='MainLayout__drawer-nav-link'>{l('tutorials')}</Link>
@@ -35,12 +41,7 @@ export default class MainLayout extends Component {
                         <Link to="/contacts" className='MainLayout__drawer-nav-link'>{l('contact')}</Link>
                     </Navigation>
                 </Drawer>
-                {/*
-                 <WelcomeDialog
-                 isOpen={showWelcomeScreen}
-                 onDismiss={onWelcomeScreenDismiss}
-                 />
-                 */}
+
                 <div>
                     {this.props.children}
                 </div>
