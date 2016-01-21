@@ -20,7 +20,7 @@ export default class AppBarUser extends React.Component {
                 {!user &&
                 <div className='AppBarUser__login'>
                     <Button raised ripple accent onClick={this.props.handleLogin}>
-                        Sign up / Sign in
+                         Sign in
                     </Button>
                 </div>
                 }

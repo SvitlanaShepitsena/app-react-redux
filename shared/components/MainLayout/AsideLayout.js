@@ -6,8 +6,6 @@ import Icon      from 'react-mdl/lib/Icon';
 import Grid, {Cell} from 'react-mdl/lib/Grid';
 import {Link} from 'react-router';
 
-import AppBar      from '../AppBar/AppBar.js';
-
 export default class AsideLayout extends Component {
 
     render() {

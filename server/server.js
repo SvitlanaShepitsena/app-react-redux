@@ -57,7 +57,7 @@ import fs from 'fs';
 //});
 const app = express();
 app.use(compress({
-    threshold:0
+    threshold: 0
 }));
 app.use('/static', express.static('public/static', {maxAge: 8640000}));
 app.use(cookieParser());
