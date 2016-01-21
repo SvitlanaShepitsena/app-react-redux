@@ -3,26 +3,31 @@ import nodemailer from 'nodemailer';
 export default  function (app) {
     // user routes
     app.post('/gmail', (req, res)=> {
-        var transporter = nodemailer.createTransport('smtps://reduxwebapp%40gmail.com:Kyiv2005#@smtp.gmail.com');
-
-// setup e-mail data with unicode symbols
-        var mailOptions = {
-            from: 'Fred Foo 👥 <reduxwebapp@gmail.com>', // sender address
-            to: 'chicagobusinessintelligence1@gmail.com', // list of receivers
-            subject: 'Hello ✔', // Subject line
-            text: 'Hello world 🐴', // plaintext body
-            html: '<b>Hello world 🐴</b>' // html body
-        };
-
-// send mail with defined transport object
-        transporter.sendMail(mailOptions, function (error, info) {
-            if (error) {
-                return console.log(error);
+        var name = req.body.username;
+        var from = "reduxwepapp@gmail.com";
+        var message = req.body.message;
+        var to = req.body.email;
+        var smtpTransport = nodemailer.createTransport("SMTP", {
+            service: "Gmail",
+            auth: {
+                user: "reduxwepapp@gmail.com",
+                pass: "Kyiv2005#"
             }
-            console.log('Message sent: ' + info.response);
+        });
+        var mailOptions = {
+            from: from,
+            to: to,
+            subject: ' | new message from Chicago Web App !',
+            text: message
+        }
+        smtpTransport.sendMail(mailOptions, function (error, response) {
+            if (error) {
+                console.log(error);
+            } else {
+                res.redirect('/');
+            }
         });
 
-        console.log(req.body);
     });
 
 };
