@@ -1,3 +1,4 @@
+/server/config/gmail.js
 node_modules/
 /etc/no-share.json
 public/static/config.js

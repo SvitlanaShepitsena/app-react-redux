@@ -22,9 +22,9 @@ class ContactForm extends Component {
     };
 
     handleSubmit(e) {
-        e.preventDefault();
+        //e.preventDefault();
         console.log('Your message have been sent');
-        this.props.resetForm();
+        //this.props.resetForm();
     }
 
     render() {
@@ -34,13 +34,13 @@ class ContactForm extends Component {
             submitting
         } = this.props;
         return (
-            <Card shadow={1} className="ContactForm__Card">
-                <CardTitle>
-                    Send a message
-                </CardTitle>
-                <CardText>
+            <form action="/gmail" method="post">
+                <Card shadow={1} className="ContactForm__Card">
+                    <CardTitle>
+                        Send a message
+                    </CardTitle>
+                    <CardText>
 
-                    <form>
                         <div className="ContactForm__input-container">
                             <input className="mdl-textfield__input" type="text" placeholder="Name" {...name}/>
                         </div>
@@ -55,24 +55,26 @@ class ContactForm extends Component {
                                   value={message.value || ''}/> {message.touched && message.error &&
                         <span className="ContactForm__error">{message.error}</span>}
                         </div>
-                    </form>
-                </CardText>
-                <CardActions>
-                    <Button
-                        primary ripple
-                        disabled={submitting}
-                        onClick={this.handleSubmit.bind(this)}>
-                        {submitting ? <i/> : <i/>}
-                        Submit
-                    </Button>
-                    <Button ripple
+                    </CardText>
+                    <CardActions>
+                        <Button
+                            type="submit"
+                            primary ripple
                             disabled={submitting}
-                            onClick={resetForm}>
-                        Clear
-                    </Button>
-                </CardActions>
-            </Card>
-        );
+                            onClick={this.handleSubmit.bind(this)}>
+                            {submitting ? <i/> : <i/>}
+                            Submit
+                        </Button>
+                        <Button ripple
+                                disabled={submitting}
+                                onClick={resetForm}>
+                            Clear
+                        </Button>
+                    </CardActions>
+                </Card>
+            </form>
+        )
+            ;
     }
 }
 

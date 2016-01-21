@@ -42,6 +42,7 @@ import passport from 'passport';
 import configPassport from './config/passport';
 import configExpress from './config/express';
 import configRoutes from './config/routes';
+import configGmail from './config/gmail';
 import fs from 'fs';
 
 /* Mongoose */
@@ -60,6 +61,7 @@ app.use(cookieParser());
 configPassport(app, passport);
 configExpress(app, passport);
 configRoutes(app, passport);
+configGmail(app);
 
 app.use((req, res) => {
     // Process old links like /en/articles
