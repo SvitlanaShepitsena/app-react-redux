@@ -24,6 +24,7 @@ export default class AsideLayout extends Component {
                         phone={12}>
                         <aside>
                             <a style={{textAlign:'center', color:'#393939'}}
+                               target="_blank"
                                href="https://tleunen.github.io/react-mdl/#/cards">
                                 <h4>
                                     React-MDL
@@ -56,6 +57,7 @@ export default class AsideLayout extends Component {
                                       margin:"0px auto 16px auto",
                                       height: '256px', background:
                                       'url(https://www.getmdl.io/assets/demos/image_card.jpg) center / cover' }}>
+
                                     <CardTitle expand/>
                                     <CardActions
                                         style={{height: '52px', padding: '16px', background: 'rgba(0,0,0,0.2)'}}>
