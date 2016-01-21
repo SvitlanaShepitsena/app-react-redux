@@ -1,5 +1,5 @@
-/server/config/gmail.js
 node_modules/
+/ngrok.exe
 /etc/no-share.json
 public/static/config.js
 npm-debug.log
