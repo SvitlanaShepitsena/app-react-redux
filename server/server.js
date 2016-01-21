@@ -4,6 +4,7 @@ import express from 'express';
 import compress from 'compression';
 import cookieParser from 'cookie-parser';
 
+import React                     from 'react';
 import ReactDOM                  from 'react-dom/server';
 import {Provider}              from 'react-redux';
 import {RoutingContext, match} from 'react-router';
