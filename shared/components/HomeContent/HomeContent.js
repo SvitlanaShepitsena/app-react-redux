@@ -31,7 +31,9 @@ export default class HomeContent extends React.Component {
                     </div>
                 </div>
                 <div className="HomePage_iconsContainer">
-                    <HomeList></HomeList>
+                    <div className="HomePage_slider">
+                        <HomeList></HomeList>
+                    </div>
                 </div>
                 <div className="HomePage_sliderContainer">
                     <div className="HomePage_slider">

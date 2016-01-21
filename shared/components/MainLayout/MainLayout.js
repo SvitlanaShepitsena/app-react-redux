@@ -25,27 +25,27 @@ export default class MainLayout extends Component {
         const {showWelcomeScreen, showFooter, footerLinks, onWelcomeScreenDismiss} = this.props;
 
         return (
-            <div style={{minHeight: '1200px', position: 'relative'}}>
-                <Layout fixedHeader>
-                    <AppBar />
-                    <Drawer>
-                        <Navigation>
-                            <Link to="/about" className='MainLayout__drawer-nav-link'>{l('about us')}</Link>
-                            <Link to="/tutorials" className='MainLayout__drawer-nav-link'>{l('tutorials')}</Link>
-                            <Link to="/projects" className='MainLayout__drawer-nav-link'>{l('projects')}</Link>
-                            <Link to="/contacts" className='MainLayout__drawer-nav-link'>{l('contact')}</Link>
-                        </Navigation>
-                    </Drawer>
-                    <WelcomeDialog
-                        isOpen={showWelcomeScreen}
-                        onDismiss={onWelcomeScreenDismiss}
-                    />
-                    <div>
-                        {this.props.children}
-                    </div>
-                    <Footer/>
-                </Layout>
-            </div>
+            <Layout fixedHeader style={{minHeight: '1400px',height:"auto", position: 'relative'}}>
+                <AppBar />
+                <Drawer>
+                    <Navigation>
+                        <Link to="/about" className='MainLayout__drawer-nav-link'>{l('about us')}</Link>
+                        <Link to="/tutorials" className='MainLayout__drawer-nav-link'>{l('tutorials')}</Link>
+                        <Link to="/projects" className='MainLayout__drawer-nav-link'>{l('projects')}</Link>
+                        <Link to="/contacts" className='MainLayout__drawer-nav-link'>{l('contact')}</Link>
+                    </Navigation>
+                </Drawer>
+                {/*
+                 <WelcomeDialog
+                 isOpen={showWelcomeScreen}
+                 onDismiss={onWelcomeScreenDismiss}
+                 />
+                 */}
+                <div>
+                    {this.props.children}
+                </div>
+                <Footer/>
+            </Layout>
         );
     }
 }

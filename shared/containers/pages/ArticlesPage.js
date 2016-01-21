@@ -11,8 +11,6 @@ import {bindActionCreators} from 'redux';
 import * as articleActions from '../../actions/article';
 import ArticlesGrid from '../../components/ArticlesGrid/ArticlesGrid.js';
 
-
-
 class ArticlesPageContainer extends Component {
     static contextTypes = {i18n: PropTypes.object};
 
@@ -60,10 +58,6 @@ class ArticlesPageContainer extends Component {
         if (needToReloadData) {
             this.props.dispatch(loadArticles(nextProps.params, nextQuery));
         }
-    }
-
-    componentWillUnmount() {
-        embedEvents.unsubscribe();
     }
 
     render() {
