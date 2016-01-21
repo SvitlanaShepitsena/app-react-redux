@@ -16,7 +16,7 @@ export default class Footer extends Component {
         const {links, linkToShare, showShareDialog, onLinkClick, onShareClick, onShareClose} = this.props;
 
         return (
-            <div className='Footer'>
+            <footer className='Footer'>
                 <ShareDialog
                     title={l('Share this page')}
                     isOpen={showShareDialog}
@@ -64,7 +64,7 @@ export default class Footer extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </footer>
         );
     }
 }
