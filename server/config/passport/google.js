@@ -30,6 +30,8 @@ export default new GoogleStrategy({
     var user = {};
     user.email = profile._json.emails[0].value;
     user.google = profile.id;
+    user.profile = {};
+    user.tokens = [];
     user.tokens.push({kind: 'google', accessToken: accessToken});
     user.profile.name = profile._json.displayName;
     user.profile.gender = profile._json.gender;

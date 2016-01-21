@@ -14,6 +14,9 @@ export default new facebookStrategy({
     var user = {};
     user.email = profile._json.email;
     user.facebook = profile.id;
+
+    user.profile = {};
+    user.tokens = [];
     user.tokens.push({kind: 'facebook', accessToken: accessToken});
     user.profile.name = profile._json.displayName;
     user.profile.gender = profile._json.gender;
