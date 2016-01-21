@@ -1,8 +1,9 @@
 @import "palette.less";
+@import 'media.less';
 
 html, body {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   -webkit-font-smoothing: antialiased;
@@ -17,40 +18,51 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-size: 56px;
+  font-size: 50px;
   font-weight: 400;
   line-height: 1.35;
   letter-spacing: -0.02em;
   opacity: 0.54;
-  font-size: 0.6em;
+  @media @phone {
+    font-size: 40px;
+  }
 }
 
 h1 {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-size: 56px;
+  font-size: 50px;
   font-weight: 400;
   line-height: 1.35;
   letter-spacing: -0.02em;
   margin-top: 24px;
   margin-bottom: 24px;
+  @media @phone {
+    font-size: 42px;
+  }
 }
 
 h2 {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-size: 45px;
+  font-size: 40px;
   font-weight: 400;
   line-height: 48px;
   margin-top: 24px;
   margin-bottom: 24px;
+  @media @phone {
+    font-size: 36px;
+  }
 }
 
 h3 {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-size: 34px;
+  font-size: 32px;
   font-weight: 400;
   line-height: 40px;
   margin-top: 24px;
   margin-bottom: 24px;
+  @media @phone {
+    font-size: 30px;
+  }
 }
 
 h4 {
@@ -61,6 +73,9 @@ h4 {
   -moz-osx-font-smoothing: grayscale;
   margin-top: 24px;
   margin-bottom: 16px;
+  @media @phone {
+    font-size: 22px;
+  }
 }
 
 h5 {
