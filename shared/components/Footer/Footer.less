@@ -1,3 +1,5 @@
+@import '../../assets/media.less';
+
 @footer-color: #343434;
 
 .Footer {
@@ -24,6 +26,10 @@
   text-transform: uppercase;
   margin: 0;
   font-size: 14px;
+  @media @phone {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
 }
 
 .Footer__menu-items {
@@ -37,6 +43,11 @@
     transition: .4s;
     font-weight: 300;
     cursor: pointer;
+    @media @phone {
+      font-size: 20px;
+      margin-bottom: 16px;
+      display: block;
+    }
 
     &:hover {
       text-decoration: underline;
