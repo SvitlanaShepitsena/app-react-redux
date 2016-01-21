@@ -57,7 +57,7 @@ import fs from 'fs';
 //});
 const app = express();
 app.use(compress());
-app.use('/static', express.static('public/static'));
+app.use('/static', express.static('public/static',{maxAge:8640000}));
 app.use(cookieParser());
 
 configPassport(app, passport);
@@ -153,7 +153,6 @@ function renderHTML(helmet, {componentHTML, initialState, metaData, config}) {
             <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.blue-pink.min.css"/>
             <link rel="stylesheet" href="//cdn.materialdesignicons.com/1.2.65/css/materialdesignicons.min.css">
             <link rel="stylesheet" href="${config.staticUrl}/static/build/main.css">
-            <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
             <script>
                 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -161,7 +160,6 @@ function renderHTML(helmet, {componentHTML, initialState, metaData, config}) {
                 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
             </script>
 
-            <script src="https://apis.google.com/js/api:client.js"></script>
         </head>
         <body>
         <div id="react-view">${componentHTML}</div>
@@ -171,6 +169,8 @@ function renderHTML(helmet, {componentHTML, initialState, metaData, config}) {
           </script>
 
           <script type="application/javascript" src="${config.staticUrl}/static/build/main.js"></script>
+            <script src="https://apis.google.com/js/api:client.js"></script>
+            <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
         </body>
         </html>
     `;
