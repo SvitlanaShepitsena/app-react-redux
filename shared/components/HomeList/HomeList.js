@@ -10,8 +10,8 @@ export default class HomeList extends React.Component {
 
     render() {
         return (
-            <div className="HomeList">
-                <Grid className='HomeList__grid'>
+            <div className='HomeList'>
+                //<Grid >
                     <Cell
                         col={4}
                         tablet={6}

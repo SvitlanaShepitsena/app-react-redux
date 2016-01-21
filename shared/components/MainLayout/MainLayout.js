@@ -22,7 +22,7 @@ export default class MainLayout extends Component {
 
     toggleDrawer(e) {
         document.querySelector('.mdl-layout__drawer').classList.remove('is-visible');
-        let dimmer=document.querySelector('.mdl-layout__obfuscator');
+        let dimmer = document.querySelector('.mdl-layout__obfuscator');
         dimmer.classList.remove('is-visible');
     }
 
@@ -35,6 +35,7 @@ export default class MainLayout extends Component {
                 <AppBar />
                 <Drawer onClick={this.toggleDrawer.bind(this)}>
                     <Navigation>
+                        <Link to="/" className='MainLayout__drawer-nav-link'>{l('home')}</Link>
                         <Link to="/about" className='MainLayout__drawer-nav-link'>{l('about us')}</Link>
                         <Link to="/tutorials" className='MainLayout__drawer-nav-link'>{l('tutorials')}</Link>
                         <Link to="/projects" className='MainLayout__drawer-nav-link'>{l('projects')}</Link>
