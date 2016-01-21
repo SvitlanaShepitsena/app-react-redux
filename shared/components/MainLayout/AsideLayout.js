@@ -23,7 +23,8 @@ export default class AsideLayout extends Component {
                         col={4}
                         phone={12}>
                         <aside>
-                            <a style={{textAlign:'center', color:'#393939'}} href="http://tleunen.github.io/react-mdl/#/cards">
+                            <a style={{textAlign:'center', color:'#393939'}}
+                               href="https://tleunen.github.io/react-mdl/#/cards">
                                 <h4>
                                     React-MDL
                                     Cards
@@ -54,7 +55,7 @@ export default class AsideLayout extends Component {
                                       style={{width: '320px',
                                       margin:"0px auto 16px auto",
                                       height: '256px', background:
-                                      'url(http://www.getmdl.io/assets/demos/image_card.jpg) center / cover' }}>
+                                      'url(https://www.getmdl.io/assets/demos/image_card.jpg) center / cover' }}>
                                     <CardTitle expand/>
                                     <CardActions
                                         style={{height: '52px', padding: '16px', background: 'rgba(0,0,0,0.2)'}}>
@@ -66,7 +67,7 @@ export default class AsideLayout extends Component {
                                                margin:"0px auto 16px auto", height: '320px'}}>
                                     <CardTitle expand
                                                style={{color: '#fff',
-                                                background: 'url(http://www.getmdl.io/assets/demos/dog.png) bottom right 15% no-repeat #46B6AC'}}>Update</CardTitle>
+                                                background: 'url(https://www.getmdl.io/assets/demos/dog.png) bottom right 15% no-repeat #46B6AC'}}>Update</CardTitle>
                                     <CardText>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                         Aenan convallis.
