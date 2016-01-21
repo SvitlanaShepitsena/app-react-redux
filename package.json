@@ -10,7 +10,12 @@
   "private": true,
   "scripts": {
     "prebuild": "rimraf public/static/build",
-    "build": "set NODE_ENV=production&&webpack -p ",
+    "build": "set NODE_ENV=production&&webpack -p --progress",
+    "git": "git add --all",
+    "postgit": "git commit -m \"heroku deploy\"",
+    "predeploy": "npm run build",
+    "deploy": "npm run git",
+    "postdeploy": "git push heroku master",
     "dev": "set NODE_ENV=development&&npm-run-all --parallel devp nodemon",
     "start": "set NODE_ENV=production&&node server/runner.js",
     "r": "set NODE_ENV=production&&node server/runner.js",
