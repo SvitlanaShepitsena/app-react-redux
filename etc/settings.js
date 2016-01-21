@@ -18,7 +18,7 @@ export default function (host) {
     jsSettings = JSON.parse(jsSettings);
     if (host.indexOf('local') === -1) {
         jsSettings.staticUrl = jsSettings.staticUrl.substr(0, jsSettings.staticUrl.length - 5);
-        jsSettings.socialAuthURL = jsSettings.replace(`:${PORT}`, '');
+        jsSettings.socialAuthURL = jsSettings.socialAuthURL.replace(`:${PORT}`, '');
     }
     return jsSettings;
 };
