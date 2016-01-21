@@ -42,12 +42,10 @@ export default class ArticlesGrid extends React.Component {
                     <Cell
                         key={article.youtubeId}
                         align='top'
-                        col={4}
+                        col={6}
                         tablet={6}
                         phone={12}>
-                        <ArticleCard
-                            name={article.title}
-                        >
+                        <ArticleCard name={article.title}>
                             <div>
                                 <img className="ArticlesGrid__youtube"
                                      src={"https://img.youtube.com/vi/" + article.youtubeId + "/0.jpg"}/>
