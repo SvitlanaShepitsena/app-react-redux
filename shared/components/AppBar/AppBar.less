@@ -8,17 +8,30 @@
     display: none;
 
     @media @phone, @tablet {
+      i {
+        font-size: 30px;
+        margin-top: 5px;
+      }
       display: block;
     }
   }
   .mdl-layout__header-row {
     padding: 5px;
     @media @phone, @tablet {
-      padding: 0 40px 0 60px;
+      padding: 0px;
     }
   }
-  @media @phone, @tablet {
-    width: 100%;
+  width: 100%;
+}
+
+.AppBar__logo {
+  width: 50px;
+  vertical-align: initial;
+  @media @phone {
+    min-width: 40px;
+    width: 50px;
+    position: relative;
+    left: 54px;
   }
 }
 
@@ -32,12 +45,6 @@
   @media @phone {
     display: none;
   }
-}
-
-.AppBar__logo {
-  max-width: 50px;
-  vertical-align: initial;
-  min-width: 40px;
 }
 
 .AppBar__menu-item-nav {

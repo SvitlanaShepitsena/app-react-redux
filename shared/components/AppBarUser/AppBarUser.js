@@ -18,11 +18,9 @@ export default class AppBarUser extends React.Component {
         return (
             <div className="AppBarUser">
                 {!user &&
-                <div className='AppBarUser__login'>
-                    <Button raised ripple accent onClick={this.props.handleLogin}>
-                         Sign in
-                    </Button>
-                </div>
+                <Button raised ripple accent onClick={this.props.handleLogin} className='AppBarUser__login'>
+                    Sign in
+                </Button>
                 }
                 {user && <ul className="AppBarAppBarUser__menu-info">
                     <li className="AppBarUser__menu-item">
