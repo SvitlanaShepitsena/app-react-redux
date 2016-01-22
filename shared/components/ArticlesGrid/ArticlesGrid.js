@@ -70,7 +70,6 @@ export default class ArticlesGrid extends React.Component {
         const classes = cx('ArticlesPage', {
             'ArticlesPage--loading': isLoading
         });
-
         return (
             <div className={classes}>
                 <div className='ArticlesGrid__header'>
