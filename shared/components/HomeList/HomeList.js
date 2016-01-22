@@ -11,8 +11,9 @@ export default class HomeList extends React.Component {
     render() {
         return (
             <div className='HomeList'>
-                //<Grid >
+                <Grid >
                     <Cell
+                        align="top"
                         col={4}
                         tablet={6}
                         phone={12}>

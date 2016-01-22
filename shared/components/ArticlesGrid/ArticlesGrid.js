@@ -81,7 +81,6 @@ export default class ArticlesGrid extends React.Component {
                             className='ArticlesGrid__tabs'
                             onChange={(index) => onTabChange(CATEGORIES[index])}>
                             <Tab>{l('All Tutorials')}</Tab>
-                            <Tab>{l('Angular')}</Tab>
                             <Tab>{l('React')}</Tab>
                             <Tab>{l('Redux')}</Tab>
                         </Tabs>

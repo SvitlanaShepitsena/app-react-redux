@@ -6,11 +6,14 @@ import Icon      from 'react-mdl/lib/Icon';
 import Grid, {Cell} from 'react-mdl/lib/Grid';
 import {Link} from 'react-router';
 
+if (process.env.BROWSER) {
+    require('./AsideLayout.less');
+}
 export default class AsideLayout extends Component {
 
     render() {
         return (
-            <div style={{ maxWidth: '1200', margin:' 0 auto' }}>
+            <div className="AsideLayout">
                 <Grid>
                     <Cell
                         col={8}
@@ -20,7 +23,7 @@ export default class AsideLayout extends Component {
                     <Cell
                         col={4}
                         phone={12}>
-                        <aside>
+                        <aside style={{padding:"0px 8px"}}>
                             <a style={{textAlign:'center', color:'#393939'}}
                                target="_blank"
                                href="https://tleunen.github.io/react-mdl/#/cards">
@@ -31,7 +34,8 @@ export default class AsideLayout extends Component {
                             </a>
                             <div style={{textAlign:'center'}}>
                                 <Card shadow={0}
-                                      style={{width: '320px', margin:"0px auto 16px auto", height: '256px', background: '#2196F3'}}>
+                                      className="AsideLayout__card"
+                                      style={{height: '256px', background: '#2196F3'}}>
                                     <CardTitle expand style={{alignItems: 'flex-start', color: '#fff'}}>
                                         <h4 style={{marginTop: '0'}}>
                                             Featured event:<br />
@@ -51,11 +55,8 @@ export default class AsideLayout extends Component {
                                     </CardActions>
                                 </Card>
                                 <Card shadow={0}
-                                      style={{width: '320px',
-                                      margin:"0px auto 16px auto",
-                                      height: '256px', background:
-                                      'url(https://www.getmdl.io/assets/demos/image_card.jpg) center / cover' }}>
-
+                                      className="AsideLayout__card-image"
+                                      style={{ background: 'url(https://www.getmdl.io/assets/demos/image_card.jpg) center / cover' }}>
                                     <CardTitle expand/>
                                     <CardActions
                                         style={{height: '52px', padding: '16px', background: 'rgba(0,0,0,0.2)'}}>
@@ -63,8 +64,7 @@ export default class AsideLayout extends Component {
                                         style={{color: '#fff', fontSize: '14px', fontWeight: '500'}}> Image.jpg </span>
                                     </CardActions>
                                 </Card>
-                                <Card shadow={0} style={{width: '320px',
-                                               margin:"0px auto 16px auto", height: '320px'}}>
+                                <Card shadow={0} className="AsideLayout__card-image-dog">
                                     <CardTitle expand
                                                style={{color: '#fff',
                                                 background: 'url(https://www.getmdl.io/assets/demos/dog.png) bottom right 15% no-repeat #46B6AC'}}>Update</CardTitle>

@@ -51,7 +51,7 @@ class ContactForm extends Component {
                             <span className="ContactForm__error">{email.error}</span>}
                         </div>
                         <div className="ContactForm__input-container">
-                        <textarea className="mdl-textfield__input" rows="3" {...message}
+                        <textarea className="mdl-textfield__input" placeholder="Message" rows="3" {...message}
                                   value={message.value || ''}/> {message.touched && message.error &&
                         <span className="ContactForm__error">{message.error}</span>}
                         </div>
