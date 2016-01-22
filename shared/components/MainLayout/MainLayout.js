@@ -24,6 +24,7 @@ export default class MainLayout extends Component {
         document.querySelector('.mdl-layout__drawer').classList.remove('is-visible');
         let dimmer = document.querySelector('.mdl-layout__obfuscator');
         dimmer.classList.remove('is-visible');
+
     }
 
     render() {
