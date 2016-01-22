@@ -13,6 +13,6 @@ Initial Boilerplate: https://github.com/WebbyLab/itsquiz-wall
   "facebookClientSecret": ""
 }
 2. ```npm install``` 
-3. ```npm run dev``` 
+3. ```npm run dev``` (http://localhost:3001/)
 
 
