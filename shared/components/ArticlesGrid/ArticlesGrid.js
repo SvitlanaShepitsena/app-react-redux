@@ -57,7 +57,6 @@ export default class ArticlesGrid extends React.Component {
             </Grid>
         );
     };
-
     render() {
         const {
             selectedCategory,
