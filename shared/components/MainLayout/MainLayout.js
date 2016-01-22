@@ -29,10 +29,9 @@ export default class MainLayout extends Component {
 
     render() {
         const {l} = this.context.i18n;
-        const {showWelcomeScreen, showFooter, footerLinks, onWelcomeScreenDismiss} = this.props;
 
         return (
-            <Layout fixedHeader style={{minHeight: '1400px',height:"auto", position: 'relative'}}>
+            <Layout fixedHeader style={{minHeight: '500px',height:"auto", position: 'relative'}}>
                 <AppBar />
                 <Drawer onClick={this.toggleDrawer.bind(this)}>
                     <Navigation>

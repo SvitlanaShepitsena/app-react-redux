@@ -10,7 +10,7 @@ if (process.env.BROWSER) {
     require('./ArticlesGrid.less');
 }
 
-const CATEGORIES = ['ALL', 'ANGULAR', 'REACT', 'REDUX'];
+const CATEGORIES = ['ALL', 'REACT', 'REDUX'];
 
 export default class ArticlesGrid extends React.Component {
     static contextTypes = {i18n: React.PropTypes.object};
@@ -57,6 +57,7 @@ export default class ArticlesGrid extends React.Component {
             </Grid>
         );
     };
+
     render() {
         const {
             selectedCategory,
